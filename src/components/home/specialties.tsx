@@ -3,9 +3,10 @@ import SpecialtiesCard from "./specialties-card";
 
 export default function Specialties() {
   return (
-    <section className="space-y-8 px-16 py-8">
-      <header className="text-pwr-primary text-3xl font-bold">We Specialize in</header>
-      <div className="grid grid-cols-2 gap-4">
+    // <section className="space-y-8 px-16 py-8">
+    <section className="space-y-8 py-8">
+      <header className="text-pwr-primary text-3xl font-bold">Our Specialties</header>
+      <div className="grid gap-4 md:grid-cols-2">
         <SpecialtiesCard
           icon={Antenna}
           header="Distributed Antenna Systems"
