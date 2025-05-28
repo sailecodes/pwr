@@ -1,5 +1,6 @@
 import Benefits from "@/components/home/benefits";
 import Hero from "@/components/home/hero";
+import Specialties from "@/components/home/specialties";
 import Testimonies from "@/components/home/testimonies";
 
 export default function Home() {
@@ -9,7 +10,7 @@ export default function Home() {
       {/* <Companies /> */}
       <Benefits />
       <Testimonies />
-      {/* <Specialties /> */}
+      <Specialties />
       {/* <Stats /> */}
       {/* <Process /> */}
       {/* <Videos /> */}
