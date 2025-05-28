@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { Button } from "../ui/button";
 import {
   NavigationMenu,
@@ -13,14 +12,14 @@ import { PhoneCall } from "lucide-react";
 
 export default function Nav() {
   return (
-    <div className="sticky top-0 mx-16 flex gap-4 px-8 py-4">
+    <div className="sticky top-0 flex gap-4 px-16 py-4">
       <p className="text-2xl font-bold">Power Com</p>
       <NavigationMenu>
         <NavigationMenuList>
           <NavigationMenuItem>
-            <Link href="/" passHref>
-              <NavigationMenuLink className={navigationMenuTriggerStyle()}>Home</NavigationMenuLink>
-            </Link>
+            <NavigationMenuLink className={navigationMenuTriggerStyle()} href="/">
+              Home
+            </NavigationMenuLink>
           </NavigationMenuItem>
         </NavigationMenuList>
         <NavigationMenuList>
@@ -43,9 +42,9 @@ export default function Nav() {
         </NavigationMenuList>
         <NavigationMenuList>
           <NavigationMenuItem>
-            <Link href="/remote-support" passHref>
-              <NavigationMenuLink className={navigationMenuTriggerStyle()}>Remote Support</NavigationMenuLink>
-            </Link>
+            <NavigationMenuLink className={navigationMenuTriggerStyle()} href="/remote-support">
+              Remote Support
+            </NavigationMenuLink>
           </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>

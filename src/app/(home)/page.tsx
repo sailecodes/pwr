@@ -1,17 +1,18 @@
 import Benefits from "@/components/home/benefits";
 import Hero from "@/components/home/hero";
+import Testimonies from "@/components/home/testimonies";
 
 export default function Home() {
   return (
-    <div className="mx-16">
+    <main>
       <Hero />
       {/* <Companies /> */}
       <Benefits />
-      {/* <Testimonies /> */}
+      <Testimonies />
       {/* <Specialties /> */}
       {/* <Stats /> */}
       {/* <Process /> */}
       {/* <Videos /> */}
-    </div>
+    </main>
   );
 }

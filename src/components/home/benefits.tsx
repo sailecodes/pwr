@@ -3,7 +3,7 @@ import BenefitsCard from "./benefits-card";
 
 export default function Benefits() {
   return (
-    <section className="flex flex-col items-center gap-12">
+    <section className="flex flex-col items-center gap-12 px-16">
       <header className="text-pwr-primary text-center text-2xl font-bold">Need A Better Way To...</header>
       <div className="flex gap-12">
         <BenefitsCard icon={Shield} header="Protect YOUR Data" text="" />
