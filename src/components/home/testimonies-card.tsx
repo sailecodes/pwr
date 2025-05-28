@@ -20,10 +20,7 @@ export default function TestimoniesCard({
           <p className="text-sm">{name}</p>
         </div>
       </header>
-      <p className="text-sm">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Est enim explicabo cumque commodi ex magnam dolore voluptas eius ea omnis
-        adipisci optio, deserunt assumenda fugit. Blanditiis quae sint odit doloribus.
-      </p>
+      <p className="text-sm">{review}</p>
       <div className="flex gap-1">
         {new Array(rating).fill(0).map((_, ind) => (
           <Star key={ind.toString() + company + name} color="yellow" fill="yellow" className="size-4" />
