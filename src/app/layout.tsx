@@ -26,7 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} mx-auto max-w-7xl py-4 antialiased`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} mx-auto min-h-screen max-w-7xl antialiased`}>
         <Nav />
         {children}
         {/* <Contact /> */}
