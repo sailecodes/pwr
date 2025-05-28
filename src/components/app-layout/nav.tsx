@@ -9,20 +9,16 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "../ui/navigation-menu";
-
-//  services, industries, brands
+import { PhoneCall } from "lucide-react";
 
 export default function Nav() {
   return (
-    <div className="flex gap-4">
-      {/* <Image /> */}
+    <div className="sticky top-0 mx-16 flex gap-4">
       <p className="text-2xl font-bold">Power Com</p>
       <NavigationMenu>
         <NavigationMenuList>
           <NavigationMenuItem>
-            <Link
-              href="/"
-              passHref>
+            <Link href="/" passHref>
               <NavigationMenuLink className={navigationMenuTriggerStyle()}>Home</NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
@@ -45,12 +41,21 @@ export default function Nav() {
             <NavigationMenuContent></NavigationMenuContent>
           </NavigationMenuItem>
         </NavigationMenuList>
+        <NavigationMenuList>
+          <NavigationMenuItem>
+            <Link href="/remote-support" passHref>
+              <NavigationMenuLink className={navigationMenuTriggerStyle()}>Remote Support</NavigationMenuLink>
+            </Link>
+          </NavigationMenuItem>
+        </NavigationMenuList>
       </NavigationMenu>
-      <Button
-        variant="outline"
-        className="hover:cursor-pointer ml-auto">
+      <Button variant="outline" className="hover:cursor-pointer">
         Contact
       </Button>
+      <div className="ml-auto flex items-center gap-2">
+        <PhoneCall className="size-4" />
+        <span>555-666-1234</span>
+      </div>
     </div>
   );
 }
