@@ -6,7 +6,7 @@ import Testimonies from "@/components/home/testimonies";
 
 export default function Home() {
   return (
-    <main>
+    <main className="space-y-12">
       <Hero />
       {/* <Companies /> */}
       <Benefits />

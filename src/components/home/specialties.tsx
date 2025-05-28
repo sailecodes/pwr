@@ -5,7 +5,7 @@ export default function Specialties() {
   return (
     <section className="space-y-8 px-16 py-8">
       <header className="text-pwr-primary text-3xl font-bold">We Specialize in</header>
-      <div className="grid grid-cols-2 gap-8">
+      <div className="grid grid-cols-2 gap-4">
         <SpecialtiesCard
           icon={Antenna}
           header="Distributed Antenna Systems"
