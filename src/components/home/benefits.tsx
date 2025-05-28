@@ -4,7 +4,7 @@ import BenefitsCard from "./benefits-card";
 export default function Benefits() {
   return (
     // <section className="flex flex-col items-center gap-12 px-16 py-8">
-    <section className="flex flex-col items-center gap-12 px-6 py-2 md:px-16 md:py-8">
+    <section className="flex flex-col items-center gap-12 py-2 md:px-16 md:py-8">
       <header className="text-pwr-primary text-center text-3xl font-bold">Need A Better Way To...</header>
       <div className="grid grid-rows-3 gap-8 md:grid-cols-3 md:grid-rows-1">
         <BenefitsCard

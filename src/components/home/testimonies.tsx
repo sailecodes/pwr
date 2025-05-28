@@ -2,12 +2,13 @@ import TestimoniesCard from "./testimonies-card";
 
 export default function Testimonies() {
   return (
-    <section className="bg-pwr-primary space-y-8 rounded-md px-16 py-12">
+    // <section className="bg-pwr-primary space-y-8 rounded-md px-16 py-12">
+    <section className="bg-pwr-primary space-y-12 rounded-md px-10 py-8 lg:px-16 lg:py-12">
       <header className="text-pwr-primary-foreground">
-        <p className="text-3xl font-bold">Why POWERCOMS?</p>
+        <p className="mb-1 text-3xl font-bold">Why us?</p>
         <p className="text-pwr-primary-muted-foreground text-xl font-semibold">Don't Just Take Our Word For It...</p>
       </header>
-      <div className="grid grid-cols-4 gap-8">
+      <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
         <TestimoniesCard
           company="AT&T"
           name="James T., Facilities Manager"

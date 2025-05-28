@@ -13,8 +13,8 @@ export default function TestimoniesCard({
 }) {
   return (
     <div className="text-pwr-primary-foreground space-y-2">
-      <header className="flex gap-2">
-        <div className="size-12 rounded-full bg-white" />
+      <header className="flex items-center gap-2">
+        <div className="size-12 shrink-0 rounded-full bg-white" />
         <div>
           <p className="font-semibold">{company}</p>
           <p className="text-sm">{name}</p>
