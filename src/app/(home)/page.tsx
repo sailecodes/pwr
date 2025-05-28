@@ -1,3 +1,4 @@
+import Benefits from "@/components/home/benefits";
 import Hero from "@/components/home/hero";
 
 export default function Home() {
@@ -5,7 +6,7 @@ export default function Home() {
     <div className="mx-16">
       <Hero />
       {/* <Companies /> */}
-      {/* <Benefits /> */}
+      <Benefits />
       {/* <Testimonies /> */}
       {/* <Specialties /> */}
       {/* <Stats /> */}
