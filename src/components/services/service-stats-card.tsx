@@ -10,11 +10,11 @@ export interface ServiceStatsCardProps {
 }
 
 export default function ServiceStatsCard({ stat, text, statType }: ServiceStatsCardProps) {
-  console.log(statType);
   return (
     <div className="text-pwr-primary-foreground flex flex-col text-center text-lg font-semibold">
       <CountUp
         className="text-2xl font-extrabold"
+        start={0}
         end={stat}
         enableScrollSpy
         scrollSpyOnce

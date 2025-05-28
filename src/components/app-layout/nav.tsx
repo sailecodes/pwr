@@ -12,7 +12,7 @@ import { PhoneCall } from "lucide-react";
 
 export default function Nav() {
   return (
-    <div className="sticky top-0 flex gap-4 px-16 py-4">
+    <div className="sticky top-0 z-50 flex gap-4 px-16 py-4">
       <p className="text-2xl font-bold">Power Com</p>
       <NavigationMenu>
         <NavigationMenuList>
