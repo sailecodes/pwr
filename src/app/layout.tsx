@@ -14,9 +14,10 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+// TODO: Metadata
 export const metadata: Metadata = {
   title: "Power Communications",
-  description: "Leader in electrical and IT solutions.",
+  description: "...",
 };
 
 export default function RootLayout({
@@ -27,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} mx-auto min-h-screen max-w-7xl antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} mx-auto min-h-screen antialiased`}
       >
         <Nav />
         {children}

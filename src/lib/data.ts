@@ -1,3 +1,10 @@
+export const homeHeroPhrases = [
+  "Smart IT Solutions That Power Your Business",
+  "Reliable Electrical Systems That Work",
+  "Advanced Security Systems You Can Trust",
+  "Fiber Optics Built for Speed",
+];
+
 export const services = [
   {
     service: "Managed IT",
