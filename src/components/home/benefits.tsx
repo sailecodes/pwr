@@ -1,9 +1,10 @@
 import { CircleDollarSign, Shield, SignalHigh } from "lucide-react";
 import BenefitsCard from "./benefits-card";
+import CustomButton from "../general/button";
 
 export default function Benefits() {
   return (
-    <section className="flex flex-col items-center gap-12 py-8 md:px-16">
+    <section className="mx-auto flex max-w-7xl flex-col items-center gap-12 px-10 py-8 lg:px-16 lg:py-12">
       <header className="text-pwr-primary text-center text-3xl font-extrabold">
         Need A Better Way To...
       </header>
@@ -24,9 +25,7 @@ export default function Benefits() {
           text="We optimize network performance by designing and installing high-speed, reliable wired and wireless systems that eliminate bottlenecks and keep your operations running smoothly."
         />
       </div>
-      <button className="border-pwr-primary text-pwr-primary hover:bg-pwr-primary hover:text-pwr-primary-foreground rounded-md border px-4 py-2 text-sm font-semibold transition duration-150 hover:cursor-pointer">
-        FREE CONSULTATION
-      </button>
+      <CustomButton isPrimary>FREE CONSULTATION</CustomButton>
     </section>
   );
 }

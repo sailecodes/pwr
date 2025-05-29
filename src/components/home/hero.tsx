@@ -1,6 +1,6 @@
 "use client";
 
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion } from "motion/react";
 import { useState, useEffect } from "react";
 import CustomButton from "../general/button";
 import { homeHeroPhrases } from "@/lib/data";
@@ -18,10 +18,10 @@ export default function Hero() {
 
   return (
     <section
-      className="text-pwr-primary-foreground -mt-[68px] flex h-[600px] flex-col items-center justify-center gap-12"
+      className="text-pwr-primary-foreground -mt-[68px] flex h-[600px] flex-col items-center justify-center gap-12 pt-12"
       style={{ backgroundImage: "url('/imgs/hero-bg.jpg')" }}
     >
-      <div className="text-center text-lg leading-15 font-medium">
+      <div className="text-center text-xl leading-15 font-medium">
         <AnimatePresence mode="wait">
           <motion.p
             key={homeHeroPhrases[index]}

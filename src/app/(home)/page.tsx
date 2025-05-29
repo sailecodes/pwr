@@ -1,4 +1,5 @@
 import Benefits from "@/components/home/benefits";
+import Companies from "@/components/home/companies";
 import Hero from "@/components/home/hero";
 import Specialties from "@/components/home/specialties";
 import Stats from "@/components/home/stats";
@@ -8,7 +9,7 @@ export default function Home() {
   return (
     <main className="space-y-12">
       <Hero />
-      {/* <Companies /> */}
+      <Companies />
       <Benefits />
       <Testimonies />
       <Specialties />

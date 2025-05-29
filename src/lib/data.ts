@@ -5,6 +5,19 @@ export const homeHeroPhrases = [
   "Fiber Optics Built for Speed",
 ];
 
+export const homeAssociatedCompanies = [
+  "Google",
+  "Amazon",
+  "Microsoft",
+  "Netflix",
+  "Facebook",
+  "Tesla",
+  "Target",
+  "Starbucks",
+  "SpaceX",
+  "X",
+];
+
 export const services = [
   {
     service: "Managed IT",
