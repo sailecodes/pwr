@@ -3,7 +3,7 @@ import TestimoniesCard from "./testimonies-card";
 export default function Testimonies() {
   return (
     <section className="bg-pwr-primary">
-      <div className="mx-auto max-w-7xl space-y-12 px-10 py-12 lg:px-16 lg:py-12">
+      <div className="mx-auto max-w-7xl space-y-12 px-10 py-12 lg:px-16 lg:py-14">
         <header className="text-pwr-primary-foreground">
           <p className="mb-1 text-3xl font-extrabold">Why Us?</p>
           <p className="text-pwr-primary-muted-foreground text-xl font-semibold">

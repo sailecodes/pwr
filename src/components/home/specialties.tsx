@@ -3,8 +3,8 @@ import SpecialtiesCard from "./specialties-card";
 
 export default function Specialties() {
   return (
-    <section className="space-y-8 py-8 md:px-16">
-      <header className="text-pwr-primary text-3xl font-bold">Our Specialties</header>
+    <section className="mx-auto max-w-7xl space-y-8 px-10 py-8 lg:px-16 lg:py-12">
+      <header className="text-pwr-primary text-3xl font-extrabold">Our Specialties</header>
       <div className="grid gap-4 md:grid-cols-2">
         <SpecialtiesCard
           icon={Antenna}
