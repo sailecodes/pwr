@@ -26,8 +26,8 @@ export default function Hero() {
       }}
     >
       <div className="bg-pwr-primary/30 absolute inset-0" />
-      <div className="text-pwr-primary-foreground relative z-10 flex flex-col items-center gap-6">
-        <div className="text-center text-xl leading-15 font-medium">
+      <div className="text-pwr-primary-foreground relative z-10 flex flex-col items-center gap-8">
+        <div className="space-y-4 text-center">
           <AnimatePresence mode="wait">
             <motion.p
               key={homeHeroPhrases[index]}
@@ -40,7 +40,7 @@ export default function Hero() {
               {homeHeroPhrases[index]}
             </motion.p>
           </AnimatePresence>
-          We Got You Covered.
+          <p className="text-xl font-medium">We Got You Covered.</p>
         </div>
         <CustomButton>FREE QUOTE</CustomButton>
       </div>
