@@ -7,7 +7,7 @@ export default function Testimonies() {
         <header className="text-pwr-primary-foreground">
           <p className="mb-1 text-3xl font-extrabold">Why Us?</p>
           <p className="text-pwr-primary-muted-foreground text-xl font-semibold">
-            Don't Just Take Our Word For It...
+            Don&apos;t Just Take Our Word For It...
           </p>
         </header>
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
@@ -20,7 +20,7 @@ export default function Testimonies() {
           <TestimoniesCard
             company="TikTok"
             name="Linda M., Small Business Owner"
-            review="As a small business, we needed reliable IT support without breaking the bank. This company delivered a custom solution that covered everything from network setup to data protection. They’ve been responsive, professional, and surprisingly affordable."
+            review="As a small business, we needed reliable IT support without breaking the bank. This company delivered a custom solution that covered everything from network setup to data protection. They've been responsive, professional, and surprisingly affordable."
             rating={5}
           />
           <TestimoniesCard
