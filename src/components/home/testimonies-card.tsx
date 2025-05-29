@@ -1,16 +1,16 @@
-import { Star } from "lucide-react";
+import { Star, StarHalf } from 'lucide-react';
 
-export default function TestimoniesCard({
-  company,
-  name,
-  review,
-  rating,
-}: {
+export interface TestimoniesCardProps {
   company: string;
   name: string;
   review: string;
   rating: number;
-}) {
+}
+
+export default function TestimoniesCard({ company, name, review, rating }: TestimoniesCardProps) {
+  const fullStars = Math.floor(rating);
+  const hasHalfStar = rating % 1 >= 0.5;
+
   return (
     <div className="text-pwr-primary-foreground space-y-2">
       <header className="flex items-center gap-2">
@@ -22,14 +22,22 @@ export default function TestimoniesCard({
       </header>
       <p className="text-sm">{review}</p>
       <div className="flex gap-1">
-        {new Array(rating).fill(0).map((_, ind) => (
+        {Array.from({ length: fullStars }, (_, ind) => (
           <Star
-            key={ind.toString() + company + name}
+            key={`${company}-${name}-star-full-${ind}`}
             color="yellow"
             fill="yellow"
             className="size-4"
           />
         ))}
+        {hasHalfStar && (
+          <StarHalf
+            key={`${company}-${name}-star-half`}
+            color="yellow"
+            fill="yellow"
+            className="size-4"
+          />
+        )}
       </div>
     </div>
   );

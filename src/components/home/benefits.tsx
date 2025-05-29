@@ -1,6 +1,6 @@
-import { CircleDollarSign, Shield, SignalHigh } from "lucide-react";
-import BenefitsCard from "./benefits-card";
-import CustomButton from "../general/button";
+import { CircleDollarSign, Shield, SignalHigh } from 'lucide-react';
+import CustomButton from '../general/button';
+import BenefitsCard from './benefits-card';
 
 export default function Benefits() {
   return (

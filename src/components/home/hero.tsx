@@ -18,7 +18,7 @@ export default function Hero() {
 
   return (
     <section
-      className="relative -mt-[68px] grid h-[600px] place-items-center p-4 pt-24"
+      className="relative -mt-[68px] grid h-[600px] place-items-center px-10 pt-22"
       style={{
         backgroundImage: "url('/imgs/hero-bg.jpg')",
         backgroundSize: "cover",
@@ -26,8 +26,8 @@ export default function Hero() {
       }}
     >
       <div className="bg-pwr-primary/30 absolute inset-0" />
-      <div className="text-pwr-primary-foreground relative z-10 flex flex-col items-center gap-8">
-        <div className="space-y-4 text-center">
+      <div className="text-pwr-primary-foreground relative z-10 flex flex-col items-center gap-12">
+        <div className="space-y-3 text-center">
           <AnimatePresence mode="wait">
             <motion.p
               key={homeHeroPhrases[index]}
