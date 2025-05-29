@@ -1,9 +1,9 @@
 "use client";
 
-import { AnimatePresence, motion } from "motion/react";
-import { useState, useEffect } from "react";
-import CustomButton from "../general/button";
-import { homeHeroPhrases } from "@/lib/data";
+import { AnimatePresence, motion } from 'motion/react';
+import { useEffect, useState } from 'react';
+import { homeHeroPhrases } from '@/lib/data';
+import CustomButton from '../general/button';
 
 export default function Hero() {
   const [index, setIndex] = useState(0);
@@ -18,25 +18,32 @@ export default function Hero() {
 
   return (
     <section
-      className="text-pwr-primary-foreground -mt-[68px] flex h-[600px] flex-col items-center justify-center gap-12 pt-18"
-      style={{ backgroundImage: "url('/imgs/hero-bg.jpg')" }}
+      className="relative -mt-[68px] grid h-[600px] place-items-center p-4 pt-24"
+      style={{
+        backgroundImage: "url('/imgs/hero-bg.jpg')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
     >
-      <div className="text-center text-xl leading-15 font-medium">
-        <AnimatePresence mode="wait">
-          <motion.p
-            key={homeHeroPhrases[index]}
-            initial={{ opacity: 0, y: 15 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            transition={{ duration: 0.5 }}
-            className="text-4xl font-extrabold"
-          >
-            {homeHeroPhrases[index]}
-          </motion.p>
-        </AnimatePresence>
-        We Got You Covered.
+      <div className="bg-pwr-primary/30 absolute inset-0" />
+      <div className="text-pwr-primary-foreground relative z-10 flex flex-col items-center gap-6">
+        <div className="text-center text-xl leading-15 font-medium">
+          <AnimatePresence mode="wait">
+            <motion.p
+              key={homeHeroPhrases[index]}
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.5 }}
+              className="text-4xl font-extrabold"
+            >
+              {homeHeroPhrases[index]}
+            </motion.p>
+          </AnimatePresence>
+          We Got You Covered.
+        </div>
+        <CustomButton>FREE QUOTE</CustomButton>
       </div>
-      <CustomButton>FREE QUOTE</CustomButton>
     </section>
   );
 }
