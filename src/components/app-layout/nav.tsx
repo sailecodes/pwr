@@ -3,6 +3,7 @@
 import { PhoneCall } from "lucide-react";
 import { motion, useScroll, useTransform } from "motion/react";
 import CustomButton from "../general/button";
+import NavLinks from "./nav-links";
 
 export default function Nav() {
   const { scrollY } = useScroll();
@@ -43,7 +44,7 @@ export default function Nav() {
     >
       <div className="mx-auto flex max-w-7xl items-center gap-8 px-16">
         <img src={"/logos/pwrcoms-white.png"} alt="Company Logo" width={180} />
-
+        {/* <NavLinks /> */}
         <CustomButton>Contact</CustomButton>
         <div className="text-pwr-primary-foreground ml-auto flex items-center gap-2">
           <PhoneCall />

@@ -1,7 +1,7 @@
 "use client";
 
-import CountUp from 'react-countup';
-import { EStatType } from '@/lib/enums';
+import CountUp from "react-countup";
+import { EStatType } from "@/lib/enums";
 
 export interface StatsCardProps {
   stat: number;
@@ -16,6 +16,7 @@ export default function StatsCard({ stat, text, statType }: StatsCardProps) {
         <CountUp
           start={0}
           end={stat}
+          decimals={stat % 1 > 0 ? 1 : 0}
           enableScrollSpy
           scrollSpyOnce
           scrollSpyDelay={100}

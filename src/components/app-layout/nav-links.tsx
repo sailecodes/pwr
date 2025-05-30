@@ -1,4 +1,6 @@
-import { ArrowRight } from "lucide-react";
+"use client";
+
+import Link from "next/link";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -8,44 +10,66 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "../ui/navigation-menu";
-import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover";
 
-export default function NavLinks() {
+export interface NavLinksStackPrimaryProps {
+  trigger: string;
+}
+
+export function NavLinksStackPrimary({ trigger }: NavLinksStackPrimaryProps) {
   return (
     <NavigationMenu>
       <NavigationMenuList>
         <NavigationMenuItem>
-          <NavigationMenuLink className={navigationMenuTriggerStyle()} href="/">
-            Home
-          </NavigationMenuLink>
-        </NavigationMenuItem>
-      </NavigationMenuList>
-      <NavigationMenuList>
-        <NavigationMenuItem>
-          <NavigationMenuTrigger>Services</NavigationMenuTrigger>
+          <NavigationMenuTrigger className="bg-transparent hover:bg-transparent data-[active]:bg-transparent data-[state=open]:bg-transparent">
+            {trigger}
+          </NavigationMenuTrigger>
           <NavigationMenuContent>
-            <div className="h-[200px] w-[200px] px-4 py-2 font-semibold">
-              <Popover>
-                <PopoverTrigger className="flex w-full items-center justify-between">
-                  <p>IT Services</p>
-                  <ArrowRight className="size-4" />
-                </PopoverTrigger>
-                <PopoverContent>
-                  <NavigationMenuLink className={navigationMenuTriggerStyle()} href="/">
-                    Service 1
-                  </NavigationMenuLink>
-                  <NavigationMenuLink className={navigationMenuTriggerStyle()} href="/">
-                    Service 2
-                  </NavigationMenuLink>
-                  <NavigationMenuLink className={navigationMenuTriggerStyle()} href="/">
-                    Service 3
-                  </NavigationMenuLink>
-                </PopoverContent>
-              </Popover>
-            </div>
+            <ul className="grid w-[200px] gap-3 p-4">
+              <li>
+                <NavigationMenuLink asChild>
+                  <Link
+                    href="/services/it"
+                    className="hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground block space-y-1 rounded-md p-3 leading-none no-underline transition-colors outline-none select-none"
+                  >
+                    IT Services
+                  </Link>
+                </NavigationMenuLink>
+              </li>
+              <li>
+                <NavigationMenuLink asChild>
+                  <Link
+                    href="/services/security"
+                    className="hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground block space-y-1 rounded-md p-3 leading-none no-underline transition-colors outline-none select-none"
+                  >
+                    Security Services
+                  </Link>
+                </NavigationMenuLink>
+              </li>
+              <li>
+                <NavigationMenuLink asChild>
+                  <Link
+                    href="/services/cloud"
+                    className="hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground block space-y-1 rounded-md p-3 leading-none no-underline transition-colors outline-none select-none"
+                  >
+                    Cloud Services
+                  </Link>
+                </NavigationMenuLink>
+              </li>
+            </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>
+  );
+}
+
+export default function NavLinks() {
+  return (
+    <div className="text-pwr-primary-foreground flex items-center gap-8 font-medium">
+      <Link href="/" className="underline-offset-4 hover:underline">
+        Home
+      </Link>
+      <NavLinksStackPrimary trigger="Services" />
+    </div>
   );
 }

@@ -1,26 +1,38 @@
 import { Antenna, ListTreeIcon, Server, Tv2, Video, Zap } from "lucide-react";
+import { EStatType } from "./enums";
 
 export const homeHeroPhrases = [
-  "Smart IT Solutions That Power Your Business",
-  "Reliable Electrical Systems That Work",
-  "Advanced Security Systems You Can Trust",
-  "Fiber Optics Built for Speed",
-  "Tailored Tech Infrastructure for Growing Teams",
-  "24/7 Network Support for Seamless Operations",
-  "Scalable Cloud Solutions for Modern Enterprises",
-  "Enterprise-Grade IT Services Without the Hassle",
-  "Cutting-Edge Security to Protect What Matters",
-  "IT Strategies Aligned With Your Business Goals",
-  "High-Performance Cabling for High-Speed Demands",
-  "Future-Proof IT Systems for Smarter Workflows",
-  "Infrastructure That Adapts to Your Growth",
-  "On-Demand Tech Services Backed by Experts",
-  "Wired for Speed, Built for Reliability",
-  "Integrated Security That Keeps You in Control",
-  "Business-Ready IT With No Surprises",
-  "Proactive Maintenance for Zero Downtime",
-  "Unified Communications Built for Teams",
-  "Powering Innovation Through Technology",
+  "24/7 IT Support",
+  "Complete IT Solutions for Any Size Business",
+  "Enterprise-Level IT—Priced for SMBs",
+  "End-to-End Managed IT Services",
+  "Fully Outsourced IT Department",
+  "Fast, Local IT Support That Actually Responds",
+  "IT Services That Just Work",
+  "Proactive IT That Prevents Downtime",
+  "IT That Grows With Your Business",
+  "Server & Network Setup, Maintenance, and Support",
+  "Full-Spectrum IT—From Planning to Execution",
+  "Secure, Scalable IT Infrastructure",
+  "Affordable Enterprise-Grade IT",
+  "IT Helpdesk With Real People, No Robots",
+  "Future-Proof IT Built for Performance",
+  "One Call for All Your IT Needs",
+  "IT Designed for Hotels, Schools, and Warehouses",
+  "Data Security and Business Continuity You Can Rely On",
+  "Cloud, On-Prem, or Hybrid—We Handle It All",
+  "Reliable IT That Keeps Your Operations Running",
+  "Customized IT Support for Every Business Type",
+  "MSP-Level IT Without the Corporate Overhead",
+  "IT Support With a Construction-Grade Work Ethic",
+  "High-Speed Fiber Optic Installations",
+  "Enterprise-Grade Structured Cabling",
+  "Custom DAS Solutions That Eliminate Dead Zones",
+  "Commercial Electrical Installations & Upgrades",
+  "Advanced Surveillance & Access Control Systems",
+  "Low Voltage Cabling That’s Clean, Fast, and Reliable",
+  "Integrated Security Systems for Business Protection",
+  "Signal-Boosting DAS for Stadiums, Hotels, and Large Spaces",
 ];
 
 export const homeAssociatedCompanies = [
@@ -130,6 +142,24 @@ export const homeSpecialties = [
     icon: ListTreeIcon,
     header: "Structured Cabling",
     text: "We design and implement structured cabling systems that support high-performance data and voice networks, ensuring scalability, reliability, and ease of maintenance.",
+  },
+];
+
+export const homeStats = [
+  {
+    stat: 200,
+    text: "Commercial Sites Fully Networked by Powercom",
+    statType: EStatType.PLUS,
+  },
+  {
+    stat: 99.9,
+    text: "Network Uptime Across All Managed Clients",
+    statType: EStatType.PERCENTAGE,
+  },
+  {
+    stat: 1000000,
+    text: "Of Fiber & Cabling Installed Across California, Nevada, and Arizona",
+    statType: EStatType.PLUS,
   },
 ];
 

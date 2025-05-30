@@ -1,5 +1,5 @@
-import { EStatType } from '@/lib/enums';
-import StatsCard from './stats-card';
+import { homeStats } from "@/lib/data";
+import StatsCard from "./stats-card";
 
 export default function Stats() {
   return (
@@ -13,9 +13,14 @@ export default function Stats() {
     >
       <div className="bg-pwr-primary/85 absolute inset-0" />
       <div className="relative z-10 flex flex-col gap-12 md:flex-row md:justify-center md:gap-32">
-        <StatsCard stat={20} text="Businesses Count On Us" statType={EStatType.NONE} />
-        <StatsCard stat={10} text="Years Delivering IT Excellence" statType={EStatType.PLUS} />
-        <StatsCard stat={137} text="Happy Clients" statType={EStatType.NONE} />
+        {homeStats.map((stat, ind) => (
+          <StatsCard
+            key={`${stat.stat}-${stat.text}-${ind}-stat`}
+            stat={stat.stat}
+            text={stat.text}
+            statType={stat.statType}
+          />
+        ))}
       </div>
     </section>
   );
