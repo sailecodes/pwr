@@ -14,6 +14,38 @@ import {
 } from "lucide-react";
 import { EStatType } from "./enums";
 
+export const navServiceCategories = [
+  "Managed IT",
+  "Network Infrastructure",
+  "Cloud Hosting Solutions",
+  "Cybersecurity",
+  "VoIP Phone Solutions",
+  "Commercial & Residential Electrical Solutions",
+  "Lighting Solutions",
+  "Low Voltage Electrical Systems",
+  "Industrial Electrical Services",
+  "Backup Power & Energy Solutions",
+  "Video Surveillance Systems",
+  "Access Control Systems",
+  "Alarm Systems",
+  "Intercom & PA Systems",
+  "Fiber Installation & Infrastructure",
+  "Fiber Splicing & Testing Services",
+  "Residential & Multi-Tenant Fiber",
+  "Commercial Structured Cabling",
+  "Voice & Data Cabling",
+  "Network Room & IDF/MDF Buildouts",
+  "Low Voltage & Specialty Cabling",
+  "DAS System Design & Installation",
+  "Sound System Design & Installation",
+  "Visual Display Solutions",
+  "Lighting Systems for Stage & Space",
+  "Live Streaming & Broadcast Systems",
+  "AV Solutions for Commercial Spaces",
+  "Google Search Ads (PPC)",
+  "Search Engine Optimization (SEO)",
+];
+
 export const homeHeroPhrases = [
   "24/7 IT Support",
   "Complete IT Solutions for Any Size Business",
