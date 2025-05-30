@@ -1,4 +1,3 @@
-import { CircleDollarSign, Shield, SignalHigh } from "lucide-react";
 import { homeGuarantees } from "@/lib/data";
 import CustomButton from "../general/button";
 import GuaranteesCard from "./guarantees-card";
@@ -9,7 +8,7 @@ export default function Benefits() {
       <header className="text-pwr-primary text-center text-3xl font-extrabold">
         Our Guarantees
       </header>
-      <div className="grid grid-rows-3 gap-8 md:grid-cols-3 md:grid-rows-2">
+      <div className="grid grid-rows-3 gap-8 md:grid-cols-3 md:grid-rows-1">
         {homeGuarantees.map((guarantee, ind) => (
           <GuaranteesCard
             key={`${guarantee.header}-${ind}-guarantee`}
@@ -18,7 +17,7 @@ export default function Benefits() {
           />
         ))}
       </div>
-      <CustomButton isPrimary>FREE CONSULTATION</CustomButton>
+      <CustomButton isPrimary>FREE QUOTE</CustomButton>
     </section>
   );
 }

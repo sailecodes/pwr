@@ -24,7 +24,7 @@ export default function StatsCard({ stat, text, statType }: StatsCardProps) {
           suffix={statType === EStatType.PERCENTAGE ? "%" : statType === EStatType.PLUS ? "+" : ""}
         />
       </span>
-      <p className="text-lg font-semibold">{text}</p>
+      <p className="text-lg font-bold">{text}</p>
     </div>
   );
 }

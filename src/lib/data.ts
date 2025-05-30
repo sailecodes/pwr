@@ -7,6 +7,7 @@ import {
   Server,
   ServerCog,
   ShieldCheck,
+  ThumbsUp,
   Tv2,
   Video,
   Zap,
@@ -81,23 +82,15 @@ export const homeAssociatedCompanies = [
 
 export const homeGuarantees = [
   {
-    icon: BadgeCheck,
-    header: "We Beat Any Quote",
-  },
-  {
     icon: DollarSign,
-    header: "Best Price, Top-Tier Service",
+    header: "We Beat Any Quote — Guaranteed",
   },
   {
     icon: Building2,
     header: "Enterprise-Level Solutions, Without Enterprise Pricing",
   },
   {
-    icon: ServerCog,
-    header: "Affordable, Scalable IT That Works",
-  },
-  {
-    icon: ShieldCheck,
+    icon: ThumbsUp,
     header: "Work Done Right the First Time — Or We Fix It Free",
   },
 ];
@@ -135,34 +128,34 @@ export const homeTestimonies = [
 
 export const homeSpecialties = [
   {
-    icon: Antenna,
-    header: "Distributed Antenna Systems",
-    text: "We design and install customized DAS solutions that enhance wireless coverage in large or signal-challenged environments, ensuring reliable connectivity throughout your facility.",
+    icon: Tv2,
+    header: "IT Services",
+    text: "Comprehensive IT support and infrastructure — from cloud solutions to cybersecurity and managed services. We keep your business connected, secure, and running smoothly.",
   },
   {
     icon: Zap,
-    header: "Electrical",
-    text: "Our licensed electricians provide comprehensive electrical services, from new installations to system upgrades and maintenance, with a focus on safety, code compliance, and efficiency.",
-  },
-  {
-    icon: Tv2,
-    header: "IT Services",
-    text: "We offer end-to-end IT solutions including network setup, server configuration, system integration, and ongoing support to keep your technology infrastructure secure and optimized.",
-  },
-  {
-    icon: Server,
-    header: "Fiber Optics",
-    text: "We specialize in the installation and termination of high-speed fiber optic networks, delivering fast, reliable data transmission for both enterprise and commercial applications.",
-  },
-  {
-    icon: Video,
-    header: "Security Systems",
-    text: "Our team installs and maintains advanced security systems, including surveillance cameras, access control, and monitoring solutions tailored to protect your assets and personnel.",
+    header: "Electrical Services",
+    text: "Licensed electrical work for residential, commercial, and industrial projects — from lighting to full power systems.",
   },
   {
     icon: ListTreeIcon,
     header: "Structured Cabling",
-    text: "We design and implement structured cabling systems that support high-performance data and voice networks, ensuring scalability, reliability, and ease of maintenance.",
+    text: "Professional-grade cabling for voice, data, and devices. Clean, labeled, and scalable systems that support your network today and tomorrow.",
+  },
+  {
+    icon: Antenna,
+    header: "DAS (Distributed Antenna Systems)",
+    text: "Boost indoor cellular coverage in large buildings with custom DAS design, installation, and carrier coordination.",
+  },
+  {
+    icon: Server,
+    header: "Fiber Optics",
+    text: "High-speed fiber installations, splicing, and testing for fast, reliable connectivity across your building or campus.",
+  },
+  {
+    icon: Video,
+    header: "Audio/Visual (AV)",
+    text: "From LED walls to sound systems, we design and install AV setups for churches, events, offices, and retail spaces.",
   },
 ];
 

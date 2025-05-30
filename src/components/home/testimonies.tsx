@@ -7,7 +7,7 @@ export default function Testimonies() {
       <div className="mx-auto max-w-7xl space-y-12 px-10 py-12 lg:px-16 lg:py-14">
         <header>
           <p className="text-pwr-primary-foreground mb-1 text-3xl font-extrabold">Why POWERCOM?</p>
-          <p className="text-pwr-primary-muted-foreground text-xl font-semibold">
+          <p className="text-pwr-primary-muted-foreground text-xl font-bold">
             Don't Just Take Our Word For It...
           </p>
         </header>

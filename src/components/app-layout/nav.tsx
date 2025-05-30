@@ -45,7 +45,7 @@ export default function Nav() {
       <div className="mx-auto flex max-w-7xl items-center gap-8 px-16">
         <img src={"/branding/pwrcoms-white.png"} alt="Company Logo" width={180} />
         {/* <NavLinks /> */}
-        <CustomButton>Contact</CustomButton>
+        <CustomButton>FREE QUOTE</CustomButton>
         <div className="text-pwr-primary-foreground ml-auto flex items-center gap-2">
           <PhoneCall />
           <span>555-666-1234</span>

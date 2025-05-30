@@ -1,7 +1,7 @@
 "use client";
 
-import CountUp from 'react-countup';
-import { EStatType } from '@/lib/enums';
+import CountUp from "react-countup";
+import { EStatType } from "@/lib/enums";
 
 export interface ServiceStatsCardProps {
   stat: number;
@@ -11,7 +11,7 @@ export interface ServiceStatsCardProps {
 
 export default function ServiceStatsCard({ stat, text, statType }: ServiceStatsCardProps) {
   return (
-    <div className="text-pwr-primary-foreground flex flex-col text-center text-lg font-semibold">
+    <div className="text-pwr-primary-foreground flex flex-col text-center text-lg font-bold">
       <CountUp
         className="text-3xl font-extrabold"
         start={0}

@@ -1,4 +1,4 @@
-import { Star, StarHalf } from 'lucide-react';
+import { Star, StarHalf } from "lucide-react";
 
 export interface TestimoniesCardProps {
   company: string;
@@ -16,7 +16,7 @@ export default function TestimoniesCard({ company, name, review, rating }: Testi
       <header className="flex items-center gap-2">
         <div className="size-12 shrink-0 rounded-full bg-white" />
         <div>
-          <p className="font-semibold">{company}</p>
+          <p className="font-bold">{company}</p>
           <p className="text-sm">{name}</p>
         </div>
       </header>

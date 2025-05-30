@@ -6,7 +6,7 @@ export interface ServiceGuaranteesCardProps {
 export default function ServiceGuaranteesCard({ header, text }: ServiceGuaranteesCardProps) {
   return (
     <div className="space-y-1">
-      <header className="text-2xl font-semibold">{header}</header>
+      <header className="text-2xl font-bold">{header}</header>
       <p className="text-sm">{text}</p>
     </div>
   );
