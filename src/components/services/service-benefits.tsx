@@ -1,4 +1,4 @@
-import ServiceBenefitsCard from "./service-benefits-card";
+import ServiceGuaranteesCard from "./service-benefits-card";
 
 export interface ServiceBenefitsProps {
   service: string;
@@ -11,15 +11,15 @@ export default function ServiceBenefits({ service }: ServiceBenefitsProps) {
         How Will {service.charAt(0).toUpperCase() + service.slice(1)} Help You?
       </header>
       <div className="grid gap-12 md:grid-cols-3">
-        <ServiceBenefitsCard
+        <ServiceGuaranteesCard
           header="Header"
           text="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore neque quae, omnis aspernatur mollitia inventore praesentium recusandae totam sed modi molestiae, optio aperiam atque. Accusantium quod officiis consectetur magnam excepturi?"
         />
-        <ServiceBenefitsCard
+        <ServiceGuaranteesCard
           header="Header"
           text="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore neque quae, omnis aspernatur mollitia inventore praesentium recusandae totam sed modi molestiae, optio aperiam atque. Accusantium quod officiis consectetur magnam excepturi?"
         />
-        <ServiceBenefitsCard
+        <ServiceGuaranteesCard
           header="Header"
           text="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore neque quae, omnis aspernatur mollitia inventore praesentium recusandae totam sed modi molestiae, optio aperiam atque. Accusantium quod officiis consectetur magnam excepturi?"
         />

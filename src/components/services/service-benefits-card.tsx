@@ -1,9 +1,9 @@
-export interface ServiceBenefitsCardProps {
+export interface ServiceGuaranteesCardProps {
   header: string;
   text: string;
 }
 
-export default function ServiceBenefitsCard({ header, text }: ServiceBenefitsCardProps) {
+export default function ServiceGuaranteesCard({ header, text }: ServiceGuaranteesCardProps) {
   return (
     <div className="space-y-1">
       <header className="text-2xl font-semibold">{header}</header>

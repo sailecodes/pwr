@@ -1,14 +1,14 @@
-import { homeTestimonies } from '@/lib/data';
-import TestimoniesCard from './testimonies-card';
+import { homeTestimonies } from "@/lib/data";
+import TestimoniesCard from "./testimonies-card";
 
 export default function Testimonies() {
   return (
     <section className="bg-pwr-primary">
       <div className="mx-auto max-w-7xl space-y-12 px-10 py-12 lg:px-16 lg:py-14">
         <header>
-          <p className="text-pwr-primary-foreground mb-1 text-3xl font-extrabold">Why Choose Us?</p>
+          <p className="text-pwr-primary-foreground mb-1 text-3xl font-extrabold">Why POWERCOM?</p>
           <p className="text-pwr-primary-muted-foreground text-xl font-semibold">
-            See What Our Customers Are Saying
+            Don't Just Take Our Word For It...
           </p>
         </header>
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">

@@ -1,7 +1,6 @@
 import { ElementType } from "react";
 
-export interface BenefitsCardProps {
+export interface GuaranteesCardProps {
   icon: ElementType;
   header: string;
-  text: string;
 }

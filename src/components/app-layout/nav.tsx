@@ -43,7 +43,7 @@ export default function Nav() {
       className="sticky top-0 z-50 gap-4 border-b py-4"
     >
       <div className="mx-auto flex max-w-7xl items-center gap-8 px-16">
-        <img src={"/logos/pwrcoms-white.png"} alt="Company Logo" width={180} />
+        <img src={"/branding/pwrcoms-white.png"} alt="Company Logo" width={180} />
         {/* <NavLinks /> */}
         <CustomButton>Contact</CustomButton>
         <div className="text-pwr-primary-foreground ml-auto flex items-center gap-2">

@@ -1,4 +1,16 @@
-import { Antenna, ListTreeIcon, Server, Tv2, Video, Zap } from "lucide-react";
+import {
+  Antenna,
+  BadgeCheck,
+  Building2,
+  DollarSign,
+  ListTreeIcon,
+  Server,
+  ServerCog,
+  ShieldCheck,
+  Tv2,
+  Video,
+  Zap,
+} from "lucide-react";
 import { EStatType } from "./enums";
 
 export const homeHeroPhrases = [
@@ -36,49 +48,58 @@ export const homeHeroPhrases = [
 ];
 
 export const homeAssociatedCompanies = [
-  "Google",
-  "Apple",
-  "Microsoft",
-  "Amazon",
-  "Meta",
-  "Netflix",
-  "Nvidia",
-  "Adobe",
-  "Intel",
-  "Salesforce",
-  "Cisco",
-  "Oracle",
-  "IBM",
-  "Tesla",
-  "Samsung",
-  "AMD",
-  "Spotify",
-  "Uber",
-  "Airbnb",
-  "Zoom",
+  "/companies/224-2247342_finding-your-location-mariners-church-mariners-church-logo.png",
+  "/companies/1213px-W_Hotels_Logo.svg.png",
+  "/companies/2091746.png",
+  "/companies/21180970-cox-logo-2084x692.png",
+  "/companies/Alo_Yoga_logo.svg.png",
+  "/companies/att-logo_brandlogos.net_g9nxm.png",
+  "/companies/avatar.4.png",
+  "/companies/ChargePoint-logo.png",
+  "/companies/City+of+Hope+Logo+2020.png",
+  "/companies/crypto.com-logo.png",
+  "/companies/dce4cd211d1ffaf428770b889559.png",
+  "/companies/e2a73622ceff522e8ebb529a9bdd8b4eadf12130.png",
+  "/companies/FP_logo4.png",
+  "/companies/Greenlots_Co-Brand-Logo-2.jpg",
+  "/companies/Henkel-Logo.svg.png",
+  "/companies/Innova_Logo.jpg",
+  "/companies/KB_Home-Logo.wine.png",
+  "/companies/logo+2.png",
+  "/companies/Marriott_hotels_logo14.svg.png",
+  "/companies/MBW+LLC+Logo.png",
+  "/companies/neurovasc-300x182.png",
+  "/companies/Regent_Hotels_&_Resorts_(new_logo).png",
+  "/companies/rok-hardware-and-cabinets-1280x1280.jpg",
+  "/companies/SCVi_Circle_Logo.png",
+  "/companies/Seal_of_Culver_City,_California.png",
+  "/companies/SoFi_Stadium_Logo.svg.png",
+  "/companies/Spectrum-logo.png",
+  "/companies/thelio_logo.jpg",
+  "/companies/T-Mobile_US_Logo_2022_RGB_Magenta_on_Transparent.svg.png",
 ];
 
-export const associatedCompanies = [
-  "/companies/airbnb.svg",
-  "/companies/amazon.svg",
-  "/companies/amd.svg",
-  "/companies/apple.svg",
-  "/companies/cisco.svg",
-  "/companies/google.svg",
-  "/companies/immer.svg",
-  "/companies/intel.svg",
-  "/companies/meta.svg",
-  "/companies/microstation.svg",
-  "/companies/netflix.svg",
-  "/companies/nvidia.svg",
-  "/companies/salesforce.svg",
-  "/companies/samsung.svg",
-  "/companies/spotify.svg",
-  "/companies/tacobell.svg",
-  "/companies/tesla.svg",
-  "/companies/uber.svg",
-  "/companies/virtualbox.svg",
-  "/companies/zoom.svg",
+export const homeGuarantees = [
+  {
+    icon: BadgeCheck,
+    header: "We Beat Any Quote",
+  },
+  {
+    icon: DollarSign,
+    header: "Best Price, Top-Tier Service",
+  },
+  {
+    icon: Building2,
+    header: "Enterprise-Level Solutions, Without Enterprise Pricing",
+  },
+  {
+    icon: ServerCog,
+    header: "Affordable, Scalable IT That Works",
+  },
+  {
+    icon: ShieldCheck,
+    header: "Work Done Right the First Time — Or We Fix It Free",
+  },
 ];
 
 export const homeTestimonies = [
