@@ -10,8 +10,8 @@ export default function AssociatedCompanies() {
             key={`${src}-${ind}-company-logo`}
             src={src}
             alt="Company Logo"
-            width={150}
-            height={150}
+            width={125}
+            height={125}
             className="mx-12"
           />
         ))}
