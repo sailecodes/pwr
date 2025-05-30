@@ -1,4 +1,4 @@
-import { Antenna, ListTreeIcon, Server, Tv2, Video, Zap } from 'lucide-react';
+import { Antenna, ListTreeIcon, Server, Tv2, Video, Zap } from "lucide-react";
 
 export const homeHeroPhrases = [
   "Smart IT Solutions That Power Your Business",
@@ -79,7 +79,7 @@ export const homeTestimonies = [
   },
   {
     company: "TikTok",
-    name: "Linda M., Small Business Owner",
+    name: "Linda M., Business Owner",
     review:
       "As a small business, we needed reliable IT support without breaking the bank. This company delivered a custom solution that covered everything from network setup to data protection. They've been responsive, professional, and surprisingly affordable.",
     rating: 5,
@@ -93,7 +93,7 @@ export const homeTestimonies = [
   },
   {
     company: "OC Grace",
-    name: "Angela D., Operations Manager",
+    name: "Angela D., Manager",
     review:
       "From the initial consultation to final installation, they were extremely thorough and professional. Our new security system, complete with access control and HD surveillance, gives us real peace of mind. A job well done!",
     rating: 5,
