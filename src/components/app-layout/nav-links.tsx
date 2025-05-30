@@ -2,6 +2,7 @@
 
 import { ArrowRightIcon, ChevronRight } from "lucide-react";
 import Link from "next/link";
+import { useIsMobile } from "@/hooks/use-mobile";
 import { navServiceCategories } from "@/lib/data";
 import { cn } from "@/lib/utils";
 import {
@@ -40,13 +41,13 @@ export interface NavigationMenuContentItemProps {
 
 export function NavigationMenuContentItem({ header, services }: NavigationMenuContentItemProps) {
   return (
-    <div className="s mx-2 w-[200px] space-y-2 rounded-lg px-4 py-2 hover:bg-gray-100">
+    <div className="mx-2 w-[200px] space-y-2 rounded-lg px-4 py-2 hover:bg-gray-100">
       <header className="text-sm font-bold">{header}</header>
       <ul className="grid gap-1 text-sm text-gray-500">
         {services.map((service, ind) => (
           <li
             key={`${service}-${ind}-service`}
-            className="hover:cursor-pointer hover:text-gray-600"
+            className="underline-offset-2 hover:cursor-pointer hover:text-gray-600 hover:underline"
           >
             {service}
           </li>
@@ -63,32 +64,37 @@ export interface NavLinksStackPrimaryProps {
 
 export function NavLinksStackPrimary({ trigger, data }: NavLinksStackPrimaryProps) {
   return (
-    <NavigationMenu>
-      <NavigationMenuList>
-        <NavigationMenuItem>
-          <CustomNavigationMenuTrigger>{trigger}</CustomNavigationMenuTrigger>
-          <NavigationMenuContent className="h-[500px] overflow-y-scroll py-4 [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-gray-300 dark:[&::-webkit-scrollbar-thumb]:bg-neutral-500 [&::-webkit-scrollbar-track]:rounded-full [&::-webkit-scrollbar-track]:bg-gray-100 dark:[&::-webkit-scrollbar-track]:bg-neutral-700">
-            {data.map((data, ind) => (
-              <NavigationMenuContentItem
-                key={`${data}-${ind}-service`}
-                header={data}
-                services={["Service 1", "Service 2"]}
-              />
-            ))}
-          </NavigationMenuContent>
-        </NavigationMenuItem>
-      </NavigationMenuList>
-    </NavigationMenu>
+    <NavigationMenuItem>
+      <CustomNavigationMenuTrigger>{trigger}</CustomNavigationMenuTrigger>
+      <NavigationMenuContent className="h-[500px] overflow-y-scroll py-4 [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-gray-300 [&::-webkit-scrollbar-track]:rounded-full [&::-webkit-scrollbar-track]:bg-gray-100">
+        {data.map((data, ind) => (
+          <NavigationMenuContentItem
+            key={`${data}-${ind}-service`}
+            header={data}
+            services={["Service 1", "Service 2"]}
+          />
+        ))}
+      </NavigationMenuContent>
+    </NavigationMenuItem>
   );
 }
 
 export default function NavLinks() {
   return (
-    <div className="text-pwr-primary-foreground flex items-center gap-8 font-medium">
-      <Link href="/" className="underline-offset-4 hover:underline">
-        Home
-      </Link>
-      <NavLinksStackPrimary trigger="Services" data={navServiceCategories} />
-    </div>
+    <NavigationMenu className="text-pwr-primary-foreground flex items-center gap-8 font-medium">
+      <NavigationMenuList>
+        <NavigationMenuItem>
+          <NavigationMenuLink asChild>
+            <Link
+              href="/"
+              className="hover:text-pwr-primary-foreground focus:text-pwr-primary-foreground underline-offset-2 hover:bg-transparent hover:underline focus:bg-transparent active:bg-transparent"
+            >
+              Home
+            </Link>
+          </NavigationMenuLink>
+        </NavigationMenuItem>
+        <NavLinksStackPrimary trigger="Services" data={navServiceCategories} />
+      </NavigationMenuList>
+    </NavigationMenu>
   );
 }

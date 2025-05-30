@@ -1,12 +1,9 @@
 import {
   Antenna,
-  BadgeCheck,
   Building2,
   DollarSign,
   ListTreeIcon,
   Server,
-  ServerCog,
-  ShieldCheck,
   ThumbsUp,
   Tv2,
   Video,
