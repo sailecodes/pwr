@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Geist, Geist_Mono } from "next/font/google";
 import localFont from "next/font/local";
 import Footer from "@/components/app-layout/footer";
+import Nav from "@/components/app-layout/nav";
 
 const gotham = localFont({
   src: [
@@ -34,7 +34,6 @@ const gotham = localFont({
   ],
 });
 
-// TODO: Metadata
 export const metadata: Metadata = {
   title: "Power Communications",
   description: "...",
@@ -47,9 +46,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      {" "}
       <body className={`${gotham.className} mx-auto min-h-screen antialiased`}>
-        {/* <Nav /> */}
+        <Nav />
         {children}
         {/* <Contact /> */}
         <Footer />

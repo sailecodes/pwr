@@ -1,62 +1,55 @@
-import { Button } from "../ui/button";
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-  navigationMenuTriggerStyle,
-} from "../ui/navigation-menu";
-import { ArrowRight, PhoneCall } from "lucide-react";
-import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover";
+"use client";
+
+import { PhoneCall } from "lucide-react";
+import { motion, useScroll, useTransform } from "motion/react";
+import CustomButton from "../general/button";
 
 export default function Nav() {
+  const { scrollY } = useScroll();
+  const backgroundColor = useTransform(
+    scrollY,
+    [0, 25, 50, 75, 100],
+    [
+      "transparent",
+      "rgba(19, 45, 56, 0.3)",
+      "rgba(19, 45, 56, 0.6)",
+      "rgba(19, 45, 56, 0.9)",
+      "rgba(19, 45, 56, 0.97)",
+    ],
+  );
+
+  const borderColor = useTransform(
+    scrollY,
+    [0, 25, 50, 75, 100],
+    [
+      "transparent",
+      "rgba(19, 45, 56, 0.3)",
+      "rgba(19, 45, 56, 0.6)",
+      "rgba(19, 45, 56, 0.9)",
+      "#132d38",
+    ],
+  );
+
+  const backdropFilter = useTransform(scrollY, [0, 25], ["blur(0px)", "blur(12px)"]);
+
   return (
-    <div className="sticky top-0 z-50 flex gap-4 px-16 py-4">
-      <p className="text-2xl font-bold">Power Com</p>
-      <NavigationMenu>
-        <NavigationMenuList>
-          <NavigationMenuItem>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()} href="/">
-              Home
-            </NavigationMenuLink>
-          </NavigationMenuItem>
-        </NavigationMenuList>
-        <NavigationMenuList>
-          <NavigationMenuItem>
-            <NavigationMenuTrigger>Services</NavigationMenuTrigger>
-            <NavigationMenuContent>
-              <div className="h-[200px] w-[200px] px-4 py-2 font-semibold">
-                <Popover>
-                  <PopoverTrigger className="flex w-full items-center justify-between">
-                    <p>IT Services</p>
-                    <ArrowRight className="size-4" />
-                  </PopoverTrigger>
-                  <PopoverContent>
-                    <NavigationMenuLink className={navigationMenuTriggerStyle()} href="/">
-                      Service 1
-                    </NavigationMenuLink>
-                    <NavigationMenuLink className={navigationMenuTriggerStyle()} href="/">
-                      Service 2
-                    </NavigationMenuLink>
-                    <NavigationMenuLink className={navigationMenuTriggerStyle()} href="/">
-                      Service 3
-                    </NavigationMenuLink>
-                  </PopoverContent>
-                </Popover>
-              </div>
-            </NavigationMenuContent>
-          </NavigationMenuItem>
-        </NavigationMenuList>
-      </NavigationMenu>
-      <Button variant="outline" className="hover:cursor-pointer">
-        Contact
-      </Button>
-      <div className="ml-auto flex items-center gap-2">
-        <PhoneCall className="size-4" />
-        <span>555-666-1234</span>
+    <motion.nav
+      style={{
+        backgroundColor,
+        borderColor,
+        backdropFilter,
+      }}
+      className="sticky top-0 z-50 gap-4 border-b py-4"
+    >
+      <div className="mx-auto flex max-w-7xl items-center gap-8 px-16">
+        <img src={"/logos/pwrcoms-white.png"} alt="Company Logo" width={180} />
+
+        <CustomButton>Contact</CustomButton>
+        <div className="text-pwr-primary-foreground ml-auto flex items-center gap-2">
+          <PhoneCall />
+          <span>555-666-1234</span>
+        </div>
       </div>
-    </div>
+    </motion.nav>
   );
 }

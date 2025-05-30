@@ -45,6 +45,8 @@
   --color-pwr-primary: #132d38;
   --color-pwr-primary-foreground: #fff;
   --color-pwr-primary-muted-foreground: #99a1af;
+
+  --bg: #132d38ee;
 }
 
 :root {
