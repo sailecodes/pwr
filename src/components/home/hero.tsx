@@ -20,12 +20,12 @@ export default function Hero() {
     <section
       className="relative -mt-[68px] grid h-[600px] place-items-center px-10 pt-22"
       style={{
-        backgroundImage: "url('/imgs/hero-bg.jpg')",
+        backgroundImage: "url('/bgs/hero-bg.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
     >
-      <div className="bg-pwr-primary/30 absolute inset-0" />
+      <div className="bg-pwr-primary/50 absolute inset-0" />
       <div className="text-pwr-primary-foreground relative z-10 flex flex-col items-center gap-12">
         <div className="space-y-3 text-center">
           <AnimatePresence mode="wait">

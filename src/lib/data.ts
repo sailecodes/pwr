@@ -1,3 +1,5 @@
+import { Antenna, ListTreeIcon, Server, Tv2, Video, Zap } from 'lucide-react';
+
 export const homeHeroPhrases = [
   "Smart IT Solutions That Power Your Business",
   "Reliable Electrical Systems That Work",
@@ -44,6 +46,29 @@ export const homeAssociatedCompanies = [
   "Zoom",
 ];
 
+export const associatedCompanies = [
+  "/companies/airbnb.svg",
+  "/companies/amazon.svg",
+  "/companies/amd.svg",
+  "/companies/apple.svg",
+  "/companies/cisco.svg",
+  "/companies/google.svg",
+  "/companies/immer.svg",
+  "/companies/intel.svg",
+  "/companies/meta.svg",
+  "/companies/microstation.svg",
+  "/companies/netflix.svg",
+  "/companies/nvidia.svg",
+  "/companies/salesforce.svg",
+  "/companies/samsung.svg",
+  "/companies/spotify.svg",
+  "/companies/tacobell.svg",
+  "/companies/tesla.svg",
+  "/companies/uber.svg",
+  "/companies/virtualbox.svg",
+  "/companies/zoom.svg",
+];
+
 export const homeTestimonies = [
   {
     company: "AT&T",
@@ -72,6 +97,39 @@ export const homeTestimonies = [
     review:
       "From the initial consultation to final installation, they were extremely thorough and professional. Our new security system, complete with access control and HD surveillance, gives us real peace of mind. A job well done!",
     rating: 5,
+  },
+];
+
+export const homeSpecialties = [
+  {
+    icon: Antenna,
+    header: "Distributed Antenna Systems",
+    text: "We design and install customized DAS solutions that enhance wireless coverage in large or signal-challenged environments, ensuring reliable connectivity throughout your facility.",
+  },
+  {
+    icon: Zap,
+    header: "Electrical",
+    text: "Our licensed electricians provide comprehensive electrical services, from new installations to system upgrades and maintenance, with a focus on safety, code compliance, and efficiency.",
+  },
+  {
+    icon: Tv2,
+    header: "IT Services",
+    text: "We offer end-to-end IT solutions including network setup, server configuration, system integration, and ongoing support to keep your technology infrastructure secure and optimized.",
+  },
+  {
+    icon: Server,
+    header: "Fiber Optics",
+    text: "We specialize in the installation and termination of high-speed fiber optic networks, delivering fast, reliable data transmission for both enterprise and commercial applications.",
+  },
+  {
+    icon: Video,
+    header: "Security Systems",
+    text: "Our team installs and maintains advanced security systems, including surveillance cameras, access control, and monitoring solutions tailored to protect your assets and personnel.",
+  },
+  {
+    icon: ListTreeIcon,
+    header: "Structured Cabling",
+    text: "We design and implement structured cabling systems that support high-performance data and voice networks, ensuring scalability, reliability, and ease of maintenance.",
   },
 ];
 

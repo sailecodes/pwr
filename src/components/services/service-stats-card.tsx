@@ -1,7 +1,7 @@
 "use client";
 
-import { EStatType } from "@/lib/enums";
-import CountUp from "react-countup";
+import CountUp from 'react-countup';
+import { EStatType } from '@/lib/enums';
 
 export interface ServiceStatsCardProps {
   stat: number;
@@ -13,7 +13,7 @@ export default function ServiceStatsCard({ stat, text, statType }: ServiceStatsC
   return (
     <div className="text-pwr-primary-foreground flex flex-col text-center text-lg font-semibold">
       <CountUp
-        className="text-2xl font-extrabold"
+        className="text-3xl font-extrabold"
         start={0}
         end={stat}
         enableScrollSpy
