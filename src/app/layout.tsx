@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import localFont from "next/font/local";
+import ContactUs from "@/components/app-layout/contact-us";
 import Footer from "@/components/app-layout/footer";
 import Nav from "@/components/app-layout/nav";
 
@@ -49,8 +50,8 @@ export default function RootLayout({
       <body className={`${gotham.className} mx-auto min-h-screen antialiased`}>
         <Nav />
         {children}
-        {/* <Contact /> */}
-        <Footer />
+        <ContactUs />
+        {/* <Footer /> */}
       </body>
     </html>
   );

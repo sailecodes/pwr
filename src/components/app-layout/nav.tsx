@@ -62,7 +62,7 @@ export default function Nav() {
             <Menu className="size-8" />
           </button>
           <div
-            className={`absolute inset-0 top-[100%] z-35 h-[calc(100vh-100%)] w-screen ${isMenuOpen ? "bg-pwr-primary/90" : ""}`}
+            className={`absolute inset-0 top-[100%] z-35 h-[calc(100vh-100%)] w-screen ${isMenuOpen ? "bg-pwr-primary/90" : "hidden"}`}
           >
             <div
               className={`bg-pwr-primary ml-auto h-full w-[320px] sm:w-3/5 ${isMenuOpen ? "" : "hidden"}`}

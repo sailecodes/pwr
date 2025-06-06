@@ -1,6 +1,6 @@
 import ServiceBenefits from "@/components/services/service-benefits";
 import ServiceStats from "@/components/services/service-stats";
-import ServiceSummary from "@/components/services/service-summary";
+import ServicesSummary from "@/components/services/services-summary";
 import { services } from "@/lib/data";
 
 // const faqs = [
@@ -34,7 +34,7 @@ export default async function Service({
   return (
     <div className="space-y-12 px-4 md:px-8">
       {/* <ServiceHero /> */}
-      <ServiceSummary summary={data.serviceSummary} />
+      <ServicesSummary summary={data.serviceSummary} />
       <ServiceStats />
       <ServiceBenefits service={data.service} />
       {/* <ServiceBest /> */}
