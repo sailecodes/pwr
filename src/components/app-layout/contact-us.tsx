@@ -2,23 +2,13 @@
 
 import { useForm } from "react-hook-form";
 import { z } from "zod";
+import { contactUsSchema } from "@/lib/schemas";
 import { cn } from "@/lib/utils";
 import { zodResolver } from "@hookform/resolvers/zod";
 import CustomButton from "../general/button";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "../ui/form";
 import { Input } from "../ui/input";
 import { Textarea } from "../ui/textarea";
-
-const contactUsSchema = z.object({
-  firstName: z.string().min(1, "Please enter your first name"),
-  lastName: z.string().min(1, "Please enter your last name"),
-  email: z.string().email("Invalid email address"),
-  phoneNumber: z
-    .string()
-    .regex(/^\d{3}-\d{3}-\d{4}$/, "Phone number must follow the format: xxx-xxx-xxxx"),
-  zipCode: z.string().min(5, "Please enter your zip code"),
-  message: z.string().min(1, "Please enter your message"),
-});
 
 function CustomFormField({
   control,

@@ -51,7 +51,7 @@ export default function RootLayout({
         <Nav />
         {children}
         <ContactUs />
-        {/* <Footer /> */}
+        <Footer />
       </body>
     </html>
   );
