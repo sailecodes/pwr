@@ -4,6 +4,7 @@ import localFont from "next/font/local";
 import ContactUs from "@/components/app-layout/contact-us";
 import Footer from "@/components/app-layout/footer";
 import Nav from "@/components/app-layout/nav";
+import NavAlt from "@/components/app-layout/nav-alt";
 
 const gotham = localFont({
   src: [
@@ -48,7 +49,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${gotham.className} mx-auto min-h-screen antialiased`}>
-        <Nav />
+        {/* <Nav /> */}
+        <NavAlt />
         {children}
         <Footer />
       </body>

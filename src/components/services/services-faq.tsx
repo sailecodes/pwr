@@ -16,7 +16,12 @@ function ServicesFAQItem({
 }) {
   return (
     <AccordionItem value={value}>
-      <AccordionTrigger className="text-lg font-bold">{question}</AccordionTrigger>
+      <AccordionTrigger
+        className="text-lg font-bold"
+        withIcon
+      >
+        {question}
+      </AccordionTrigger>
       <AccordionContent className="leading-relaxed">{answer}</AccordionContent>
     </AccordionItem>
   );

@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { cn } from "@/lib/utils";
 import CustomButton from "../general/custom-button";
+import CustomLink from "../general/custom-link";
 import { Separator } from "../ui/separator";
 import NavLinks from "./nav-links";
 
@@ -53,7 +54,7 @@ export default function Nav() {
         borderColor,
         backdropFilter,
       }}
-      className={`sticky top-0 z-50 gap-4 border-b ${isMenuOpen ? "bg-pwr-primary/90" : ""}`}
+      className={`sticky top-0 z-50 gap-4 border-b py-4 ${isMenuOpen ? "bg-pwr-primary/90" : ""}`}
     >
       {isMobile ? (
         <div className="text-pwr-primary-foreground flex items-center justify-between p-4">
@@ -109,7 +110,7 @@ export default function Nav() {
             width={180}
           />
           <NavLinks />
-          <CustomButton>FREE QUOTE</CustomButton>
+          <CustomLink href="/contact-us">FREE QUOTE</CustomLink>
           <div className="text-pwr-primary-foreground ml-auto flex items-center gap-2">
             <PhoneCall />
             <span>555-666-1234</span>

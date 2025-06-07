@@ -10,9 +10,9 @@ function FooterSection({
   return (
     <div className="space-y-4">
       <header className="text-2xl font-extrabold">{header}</header>
-      <div className="space-y-6">
+      <ul className="space-y-6">
         {content.map((item, ind) => (
-          <div
+          <li
             key={`${item.category}-${ind}`}
             className="space-y-3"
           >
@@ -27,9 +27,9 @@ function FooterSection({
                 </li>
               ))}
             </ul>
-          </div>
+          </li>
         ))}
-      </div>
+      </ul>
     </div>
   );
 }

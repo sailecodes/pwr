@@ -1,9 +1,7 @@
 "use client";
 
-import { ArrowRightIcon, ChevronRight } from "lucide-react";
 import Link from "next/link";
-import { useIsMobile } from "@/hooks/use-mobile";
-import { navServiceCategories } from "@/lib/data";
+import { services } from "@/lib/data";
 import { cn } from "@/lib/utils";
 import {
   NavigationMenu,
@@ -14,6 +12,7 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "../ui/navigation-menu";
+import { formatToUrlString } from "./nav-alt";
 
 export function CustomNavigationMenuTrigger({
   children,
@@ -34,22 +33,25 @@ export function CustomNavigationMenuTrigger({
   );
 }
 
-export interface NavigationMenuContentItemProps {
-  header: string;
+export function NavigationMenuContentItem({
+  category,
+  services,
+}: {
+  category: string;
   services: string[];
-}
-
-export function NavigationMenuContentItem({ header, services }: NavigationMenuContentItemProps) {
+}) {
   return (
-    <div className="mx-2 w-[200px] space-y-2 rounded-lg px-4 py-2 hover:bg-gray-100">
-      <header className="text-sm font-bold">{header}</header>
+    <div className="mx-2 w-[275px] space-y-2 rounded-lg px-4 py-2 hover:bg-gray-100">
+      <header className="text-sm font-bold">{category}</header>
       <ul className="grid gap-1 text-sm text-gray-500">
         {services.map((service, ind) => (
           <li
             key={`${service}-${ind}-service`}
             className="underline-offset-2 hover:cursor-pointer hover:text-gray-600 hover:underline"
           >
-            {service}
+            <Link href={`/services/${formatToUrlString(category)}/${formatToUrlString(service)}`}>
+              {service}
+            </Link>
           </li>
         ))}
       </ul>
@@ -59,19 +61,19 @@ export function NavigationMenuContentItem({ header, services }: NavigationMenuCo
 
 export interface NavLinksStackPrimaryProps {
   trigger: string;
-  data: string[];
+  data: { category: string; services: string[] }[];
 }
 
 export function NavLinksStackPrimary({ trigger, data }: NavLinksStackPrimaryProps) {
   return (
     <NavigationMenuItem>
       <CustomNavigationMenuTrigger>{trigger}</CustomNavigationMenuTrigger>
-      <NavigationMenuContent className="h-[500px] overflow-y-scroll py-4 [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-gray-300 [&::-webkit-scrollbar-track]:rounded-full [&::-webkit-scrollbar-track]:bg-gray-100">
-        {data.map((data, ind) => (
+      <NavigationMenuContent className="h-[500px] space-y-2 overflow-y-scroll py-4 [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-gray-300 [&::-webkit-scrollbar-track]:rounded-full [&::-webkit-scrollbar-track]:bg-gray-100">
+        {data.map((item, ind) => (
           <NavigationMenuContentItem
-            key={`${data}-${ind}-service`}
-            header={data}
-            services={["Service 1", "Service 2"]}
+            key={`${item.category}-${ind}`}
+            category={item.category}
+            services={item.services}
           />
         ))}
       </NavigationMenuContent>
@@ -93,7 +95,10 @@ export default function NavLinks() {
             </Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
-        <NavLinksStackPrimary trigger="Services" data={navServiceCategories} />
+        <NavLinksStackPrimary
+          trigger="Services"
+          data={services}
+        />
       </NavigationMenuList>
     </NavigationMenu>
   );

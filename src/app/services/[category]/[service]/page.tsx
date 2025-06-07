@@ -1,8 +1,6 @@
 import { notFound } from "next/navigation";
 import ContactUs from "@/components/app-layout/contact-us";
 import Stats from "@/components/general/stats";
-import ServiceBenefits from "@/components/services/service-benefits";
-import ServiceStats from "@/components/services/service-stats";
 import ServicesBest from "@/components/services/services-best";
 import ServicesFAQ from "@/components/services/services-faq";
 import ServicesHelp from "@/components/services/services-help";
@@ -15,8 +13,8 @@ function getUrlString(str: string): string {
 
   const formattedWords = words.map((word) => {
     if (word.toLowerCase() === "it") return "IT";
-    if (word.toLowerCase() === "voip") return "VoIP";
-    if (word.toLowerCase() === "ip") return "IP";
+    else if (word.toLowerCase() === "voip") return "VoIP";
+    else if (word.toLowerCase() === "ip") return "IP";
 
     return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
   });

@@ -18,7 +18,7 @@ export default function Hero() {
 
   return (
     <section
-      className="relative -mt-[93.63px] grid h-[600px] place-items-center px-10 pt-22"
+      className="relative grid h-[675px] place-items-center px-10 pb-4"
       style={{
         backgroundImage: "url('/bgs/hero-bg.jpg')",
         backgroundSize: "cover",
