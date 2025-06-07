@@ -54,7 +54,7 @@ export default function Testimonies() {
         <header className="space-y-1">
           <p className="text-3xl font-extrabold">Why POWERCOM?</p>
           <p className="text-pwr-primary-muted-foreground text-lg font-bold">
-            Don't Just Take Our Word For It...
+            Don&apos;t Just Take Our Word For It...
           </p>
         </header>
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
