@@ -25,18 +25,12 @@ function NavAltMobileLinkSection({
   setIsMenuOpen: Dispatch<SetStateAction<boolean>>;
 }) {
   return (
-    <AccordionItem
-      className="space-y-2"
-      value={value}
-    >
+    <AccordionItem className="space-y-2" value={value}>
       <AccordionTrigger className="text-2xl font-extrabold">{header}</AccordionTrigger>
       <AccordionContent>
         <ul className="space-y-6">
           {services.map((item, ind) => (
-            <li
-              key={`${item.category}-${ind}`}
-              className="space-y-3"
-            >
+            <li key={`${item.category}-${ind}`} className="space-y-3">
               <header className="text-lg font-bold">{item.category}</header>
               <ul className="text-pwr-primary-muted-foreground space-y-2">
                 {item.services.map((service, ind) => (
@@ -70,15 +64,10 @@ function NavAltMobile({
 }) {
   return (
     <div className="text-pwr-primary-foreground flex items-center justify-between px-8">
-      <img
-        src={"/branding/pwrcom-white.png"}
-        alt="Company Logo"
-        width={160}
-      />
-      <button
-        className="hover:cursor-pointer"
-        onClick={() => setIsMenuOpen((prev) => !prev)}
-      >
+      <Link href="/">
+        <img src={"/branding/pwrcom-white.png"} alt="Company Logo" width={160} />
+      </Link>
+      <button className="hover:cursor-pointer" onClick={() => setIsMenuOpen((prev) => !prev)}>
         <Menu className="size-8" />
       </button>
       <div
@@ -87,13 +76,10 @@ function NavAltMobile({
         <div
           className={`bg-pwr-primary ml-auto h-full overflow-y-auto p-10 ${isMenuOpen ? "" : "hidden"}`}
         >
-          <Accordion
-            type="single"
-            collapsible
-          >
+          <Accordion type="single" collapsible>
             <NavAltMobileLinkSection
               value="item-0"
-              header="IT Services"
+              header="Services"
               services={services}
               setIsMenuOpen={setIsMenuOpen}
             />
@@ -119,18 +105,11 @@ export default function NavAlt() {
       className={`bg-pwr-primary/95 sticky top-0 z-50 gap-4 py-4 shadow-sm backdrop-blur-md ${isMenuOpen ? "bg-pwr-primary/90" : ""}`}
     >
       {isMobile ? (
-        <NavAltMobile
-          setIsMenuOpen={setIsMenuOpen}
-          isMenuOpen={isMenuOpen}
-        />
+        <NavAltMobile setIsMenuOpen={setIsMenuOpen} isMenuOpen={isMenuOpen} />
       ) : (
         <div className="mx-auto flex max-w-7xl items-center gap-8 px-10">
           <Link href="/">
-            <img
-              src={"/branding/pwrcom-white.png"}
-              alt="Company Logo"
-              width={180}
-            />
+            <img src={"/branding/pwrcom-white.png"} alt="Company Logo" width={180} />
           </Link>
           <NavLinks />
           <CustomLink href="/contact-us">FREE QUOTE</CustomLink>
