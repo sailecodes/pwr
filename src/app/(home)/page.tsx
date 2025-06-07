@@ -1,7 +1,7 @@
+import Stats from "@/components/general/stats";
 import AssociatedCompanies from "@/components/home/associated-companies";
 import Hero from "@/components/home/hero";
 import Specialties from "@/components/home/specialties";
-import Stats from "@/components/home/stats";
 import Testimonies from "@/components/home/testimonies";
 
 export default function Home() {

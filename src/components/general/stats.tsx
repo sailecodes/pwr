@@ -24,7 +24,15 @@ function StatsCard({ stat, text, statType }: { stat: number; text: string; statT
   );
 }
 
-export default function Stats() {
+export default function Stats({
+  stats,
+}: {
+  stats?: {
+    stat: number;
+    text: string;
+    statType: EStatType;
+  }[];
+}) {
   return (
     <section
       className="bg-pwr-primary text-pwr-primary-foreground relative"
