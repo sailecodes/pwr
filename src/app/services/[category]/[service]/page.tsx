@@ -1,10 +1,12 @@
 import { notFound } from "next/navigation";
+import ContactUs from "@/components/app-layout/contact-us";
 import Stats from "@/components/general/stats";
 import ServiceBenefits from "@/components/services/service-benefits";
 import ServiceStats from "@/components/services/service-stats";
 import ServicesBest from "@/components/services/services-best";
 import ServicesFAQ from "@/components/services/services-faq";
 import ServicesHelp from "@/components/services/services-help";
+import ServicesHero from "@/components/services/services-hero";
 import ServicesSummary from "@/components/services/services-summary";
 import { services2 } from "@/lib/data";
 
@@ -51,8 +53,12 @@ export default async function Service({
   const serviceData = findServiceByCategoryAndName(category, service)!;
 
   return (
-    <div className="space-y-12">
-      {/* <ServiceHero /> */}
+    <main className="space-y-12">
+      <ServicesHero
+        category={category}
+        service={service}
+        serviceMainPoints={serviceData.mainPoints}
+      />
       <ServicesSummary summary={serviceData.summary} />
       <Stats />
       <ServicesHelp
@@ -61,10 +67,7 @@ export default async function Service({
       />
       <ServicesBest description={serviceData.best} />
       <ServicesFAQ faqData={serviceData.faq} />
-      {/* <ServiceBenefits service={data.service} /> */}
-      {/* <ServiceBest /> */}
-      {/* <ServiceBlogs /> */}
-      {/* <ServiceFAQ faqs={faqs} /> */}
-    </div>
+      <ContactUs />
+    </main>
   );
 }

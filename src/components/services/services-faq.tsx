@@ -28,8 +28,8 @@ export default function ServicesFAQ({
   faqData: { question: string; answer: string }[];
 }) {
   return (
-    <section className="text-pwr-primary mx-auto max-w-7xl space-y-8 px-10 py-8 lg:px-16 lg:py-12">
-      <header className="text-3xl font-extrabold">FAQ</header>
+    <section className="text-pwr-primary mx-auto max-w-7xl space-y-6 px-10 py-8 lg:px-16 lg:py-12">
+      <header className="text-3xl leading-8 font-extrabold">FAQ</header>
       <Accordion
         type="single"
         collapsible

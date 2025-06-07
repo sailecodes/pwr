@@ -2,7 +2,6 @@
 
 import { useForm } from "react-hook-form";
 import { z } from "zod";
-import { sendOutlookEmail } from "@/actions/sendOutlookEmail";
 import { contactUsSchema } from "@/lib/schemas";
 import { cn } from "@/lib/utils";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -17,6 +16,7 @@ function CustomFormField({
   label,
   placeholder,
   isTextarea,
+  isOnPrimary,
   className,
   ...props
 }: React.ComponentProps<"div"> & {
@@ -25,6 +25,7 @@ function CustomFormField({
   label: string;
   placeholder: string;
   isTextarea?: boolean;
+  isOnPrimary?: boolean;
 }) {
   return (
     <FormField
@@ -40,12 +41,12 @@ function CustomFormField({
             {isTextarea ? (
               <Textarea
                 placeholder={placeholder}
-                className="border-pwr-primary/30 h-[150px] resize-none"
+                className={`h-[150px] resize-none text-sm ${isOnPrimary ? "bg-pwr-primary-foreground" : "border-pwr-primary/30"}`}
                 {...field}
               />
             ) : (
               <Input
-                className="border-pwr-primary/30 text-sm"
+                className={`text-sm ${isOnPrimary ? "bg-pwr-primary-foreground" : "border-pwr-primary/30"}`}
                 placeholder={placeholder}
                 {...field}
               />
@@ -58,7 +59,7 @@ function CustomFormField({
   );
 }
 
-export default function ContactUs() {
+export default function ContactUs({ isOnPrimary }: { isOnPrimary?: boolean }) {
   const form = useForm<z.infer<typeof contactUsSchema>>({
     resolver: zodResolver(contactUsSchema),
     defaultValues: {
@@ -85,7 +86,9 @@ export default function ContactUs() {
   }
 
   return (
-    <section className="text-pwr-primary mx-auto my-12 max-w-7xl space-y-8 px-10 py-8 lg:px-16 lg:py-12">
+    <section
+      className={`mx-auto max-w-7xl space-y-8 px-10 py-8 lg:px-16 lg:py-12 ${isOnPrimary ? "text-pwr-primary-foreground" : "text-pwr-primary"}`}
+    >
       <header className="space-y-1">
         <p className="text-3xl font-extrabold">Contact Us</p>
         <p className="text-lg font-bold">Even if you just have some questions!</p>
@@ -100,24 +103,28 @@ export default function ContactUs() {
             name="firstName"
             label="First Name"
             placeholder="John"
+            isOnPrimary={isOnPrimary}
           />
           <CustomFormField
             control={form.control}
             name="lastName"
             label="Last Name"
             placeholder="Doe"
+            isOnPrimary={isOnPrimary}
           />
           <CustomFormField
             control={form.control}
             name="email"
             label="Email"
             placeholder="jdoe@gmail.com"
+            isOnPrimary={isOnPrimary}
           />
           <CustomFormField
             control={form.control}
             name="phoneNumber"
             label="Phone Number"
             placeholder="123-456-7890"
+            isOnPrimary={isOnPrimary}
           />
           <CustomFormField
             control={form.control}
@@ -125,6 +132,7 @@ export default function ContactUs() {
             label="Zip Code"
             placeholder="12345"
             className="sm:col-span-full"
+            isOnPrimary={isOnPrimary}
           />
           <CustomFormField
             control={form.control}
@@ -133,9 +141,10 @@ export default function ContactUs() {
             label="Message"
             placeholder=""
             className="sm:col-span-full"
+            isOnPrimary={isOnPrimary}
           />
           <CustomButton
-            isPrimary
+            isPrimary={!isOnPrimary}
             className="mx-auto w-fit sm:col-span-full"
           >
             SUBMIT

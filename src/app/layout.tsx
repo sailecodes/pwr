@@ -50,7 +50,6 @@ export default function RootLayout({
       <body className={`${gotham.className} mx-auto min-h-screen antialiased`}>
         <Nav />
         {children}
-        <ContactUs />
         <Footer />
       </body>
     </html>

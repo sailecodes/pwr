@@ -284,7 +284,7 @@ export const services2 = [
     services: [
       {
         service: "Managed IT Services",
-        bulletPoints: [
+        mainPoints: [
           "Proactive Monitoring & 24/7 Support",
           "Scalable Solutions for Growing Businesses",
           "Cybersecure, Streamlined, Fully Managed Infrastructure",
