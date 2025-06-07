@@ -1,5 +1,5 @@
 import { homeGuarantees } from "@/lib/data";
-import CustomButton from "../general/button";
+import CustomButton from "../general/custom-button";
 import GuaranteesCard from "./guarantees-card";
 
 export default function Benefits() {

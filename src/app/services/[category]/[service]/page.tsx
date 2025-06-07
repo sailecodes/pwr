@@ -2,6 +2,8 @@ import { notFound } from "next/navigation";
 import Stats from "@/components/general/stats";
 import ServiceBenefits from "@/components/services/service-benefits";
 import ServiceStats from "@/components/services/service-stats";
+import ServicesBest from "@/components/services/services-best";
+import ServicesFAQ from "@/components/services/services-faq";
 import ServicesHelp from "@/components/services/services-help";
 import ServicesSummary from "@/components/services/services-summary";
 import { services2 } from "@/lib/data";
@@ -57,6 +59,8 @@ export default async function Service({
         service={serviceData.service}
         data={serviceData.help}
       />
+      <ServicesBest description={serviceData.best} />
+      <ServicesFAQ faqData={serviceData.faq} />
       {/* <ServiceBenefits service={data.service} /> */}
       {/* <ServiceBest /> */}
       {/* <ServiceBlogs /> */}

@@ -5,7 +5,7 @@ import { motion, useScroll, useTransform } from "motion/react";
 import { useEffect, useState } from "react";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { cn } from "@/lib/utils";
-import CustomButton from "../general/button";
+import CustomButton from "../general/custom-button";
 import { Separator } from "../ui/separator";
 import NavLinks from "./nav-links";
 

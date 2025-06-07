@@ -1,8 +1,8 @@
 function ServicesHelpSection({ header, description }: { header: string; description: string }) {
   return (
     <div className="space-y-2">
-      <header className="text-lg font-bold">{header}</header>
-      <p>{description}</p>
+      <header className="text-lg leading-tight font-bold">{header}</header>
+      <p className="text-sm leading-relaxed text-balance">{description}</p>
     </div>
   );
 }

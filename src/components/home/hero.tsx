@@ -3,7 +3,7 @@
 import { AnimatePresence, motion } from "motion/react";
 import { useEffect, useState } from "react";
 import { homeHeroPhrases } from "@/lib/data";
-import CustomButton from "../general/button";
+import CustomButton from "../general/custom-button";
 
 export default function Hero() {
   const [index, setIndex] = useState(0);

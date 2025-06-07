@@ -6,7 +6,7 @@ import { sendOutlookEmail } from "@/actions/sendOutlookEmail";
 import { contactUsSchema } from "@/lib/schemas";
 import { cn } from "@/lib/utils";
 import { zodResolver } from "@hookform/resolvers/zod";
-import CustomButton from "../general/button";
+import CustomButton from "../general/custom-button";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "../ui/form";
 import { Input } from "../ui/input";
 import { Textarea } from "../ui/textarea";
