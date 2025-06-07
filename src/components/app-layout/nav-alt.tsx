@@ -125,11 +125,13 @@ export default function NavAlt() {
         />
       ) : (
         <div className="mx-auto flex max-w-7xl items-center gap-8 px-10">
-          <img
-            src={"/branding/pwrcom-white.png"}
-            alt="Company Logo"
-            width={180}
-          />
+          <Link href="/">
+            <img
+              src={"/branding/pwrcom-white.png"}
+              alt="Company Logo"
+              width={180}
+            />
+          </Link>
           <NavLinks />
           <CustomLink href="/contact-us">FREE QUOTE</CustomLink>
           <div className="text-pwr-primary-foreground ml-auto flex items-center gap-2">
