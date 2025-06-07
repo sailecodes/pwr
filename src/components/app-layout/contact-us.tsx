@@ -2,6 +2,7 @@
 
 import { useForm } from "react-hook-form";
 import { z } from "zod";
+import { sendOutlookEmail } from "@/actions/sendOutlookEmail";
 import { contactUsSchema } from "@/lib/schemas";
 import { cn } from "@/lib/utils";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -69,9 +70,18 @@ export default function ContactUs() {
       message: "",
     },
   });
+  async function onSubmit(vals: z.infer<typeof contactUsSchema>) {
+    const res = await fetch("/api/send", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(vals),
+    });
 
-  function onSubmit(vals: z.infer<typeof contactUsSchema>) {
-    console.log(vals);
+    if (!res.ok) {
+      console.error("Failed to send email:", await res.text());
+    }
   }
 
   return (

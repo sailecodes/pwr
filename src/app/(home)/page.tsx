@@ -1,5 +1,4 @@
 import AssociatedCompanies from "@/components/home/associated-companies";
-import Guarantees from "@/components/home/guarantees";
 import Hero from "@/components/home/hero";
 import Specialties from "@/components/home/specialties";
 import Stats from "@/components/home/stats";
@@ -10,7 +9,7 @@ export default function Home() {
     <main className="space-y-12">
       <Hero />
       <AssociatedCompanies />
-      <Guarantees />
+      {/* <Guarantees /> */}
       <Testimonies />
       <Specialties />
       <Stats />

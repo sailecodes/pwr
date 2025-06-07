@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
     <footer className="bg-pwr-primary text-pwr-primary-foreground">
-      <div className="relative mx-auto max-w-7xl px-10 py-8 lg:px-16 lg:py-12">
+      <div className="relative mx-auto max-w-7xl space-y-8 px-10 py-8 lg:px-16 lg:py-12">
         <header className="space-y-1">
           <img
             src={"/branding/pwrcom-white.png"}
