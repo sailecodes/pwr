@@ -83,7 +83,7 @@ function FooterCollapsibleSection({
 export default function Footer() {
   return (
     <>
-      <footer className="bg-pwr-primary text-pwr-primary-foreground mt-12">
+      <footer className="bg-pwr-primary text-pwr-primary-foreground">
         <div className="relative mx-auto flex max-w-7xl flex-col gap-22 px-10 py-8 md:flex-row md:justify-between lg:px-16 lg:py-12">
           <header className="space-y-1">
             <img
