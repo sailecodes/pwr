@@ -42,6 +42,8 @@
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
 
+  --breakpoint-hero-contact: 955px;
+
   --color-pwr-primary: #132d38;
   --color-pwr-primary-foreground: #fff;
   --color-pwr-primary-muted-foreground: #99a1af;

@@ -59,7 +59,13 @@ function CustomFormField({
   );
 }
 
-export default function ContactUs({ isPrimaryForeground }: { isPrimaryForeground?: boolean }) {
+export default function ContactUs({
+  isPrimaryForeground,
+  classNames,
+}: {
+  isPrimaryForeground?: boolean;
+  classNames?: { form: string };
+}) {
   const form = useForm<z.infer<typeof contactUsSchema>>({
     resolver: zodResolver(contactUsSchema),
     defaultValues: {
@@ -96,7 +102,7 @@ export default function ContactUs({ isPrimaryForeground }: { isPrimaryForeground
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit)}
-          className="grid gap-4 sm:grid-cols-2"
+          className={cn("grid gap-4", classNames ? classNames.form : "")}
         >
           <CustomFormField
             control={form.control}
