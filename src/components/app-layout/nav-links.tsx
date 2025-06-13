@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { services } from "@/lib/data";
-import { cn } from "@/lib/utils";
+import { cn, formatToUrlString } from "@/lib/utils";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -12,7 +12,6 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "../ui/navigation-menu";
-import { formatToUrlString } from "./nav-alt";
 
 export function CustomNavigationMenuTrigger({
   children,

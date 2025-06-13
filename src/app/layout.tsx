@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import './globals.css';
-import localFont from 'next/font/local';
-import Footer from '@/components/app-layout/footer';
-import NavAlt from '@/components/app-layout/nav-alt';
+import "./globals.css";
+import localFont from "next/font/local";
+import Footer from "@/components/app-layout/footer";
+import NavAlt from "@/components/app-layout/nav-alt";
 
 const gotham = localFont({
   src: [

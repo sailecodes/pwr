@@ -5,13 +5,10 @@ import Link from "next/link";
 import { Dispatch, SetStateAction, useEffect, useState } from "react";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { services } from "@/lib/data";
+import { formatToUrlString } from "@/lib/utils";
 import CustomLink from "../general/custom-link";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "../ui/accordion";
 import NavLinks from "./nav-links";
-
-export function formatToUrlString(str: string) {
-  return str.toLowerCase().replaceAll(" ", "-");
-}
 
 function NavAltMobileLinkSection({
   value,
