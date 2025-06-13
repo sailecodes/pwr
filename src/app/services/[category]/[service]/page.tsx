@@ -6,7 +6,6 @@ import ServicesFAQ from "@/components/services/services-faq";
 import ServicesHelp from "@/components/services/services-help";
 import ServicesHero from "@/components/services/services-hero";
 import ServicesSummary from "@/components/services/services-summary";
-import { services2 } from "@/lib/data";
 import { findServiceByCategoryAndName, getUrlString, isValidPair } from "@/lib/utils";
 
 export default async function Service({

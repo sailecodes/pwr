@@ -130,7 +130,7 @@ export default function NavAlt() {
             />
           </Link>
           <NavLinks />
-          <CustomLink href="/contact-us">FREE QUOTE</CustomLink>
+          <CustomLink href="/contact-us">FREE CONSULTATION</CustomLink>
           <div className="text-pwr-primary-foreground ml-auto flex items-center gap-2">
             <PhoneCall />
             <span>555-666-1234</span>

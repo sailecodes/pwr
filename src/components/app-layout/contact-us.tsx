@@ -147,7 +147,7 @@ export default function ContactUs({ isOnPrimary }: { isOnPrimary?: boolean }) {
             isPrimary={!isOnPrimary}
             className="mx-auto w-fit sm:col-span-full"
           >
-            SUBMIT
+            GET YOUR QUOTE NOW
           </CustomButton>
         </form>
       </Form>

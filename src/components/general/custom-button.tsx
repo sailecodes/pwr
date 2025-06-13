@@ -10,7 +10,7 @@ export default function CustomButton({
   return (
     <button
       className={cn(
-        `rounded-lg border-2 px-6 py-2 font-bold transition hover:cursor-pointer ${isPrimary ? "border-pwr-primary text-pwr-primary hover:bg-pwr-primary hover:text-pwr-primary-foreground" : "border-pwr-primary-foreground text-pwr-primary-foreground hover:bg-pwr-primary-foreground hover:text-pwr-primary"}`,
+        `rounded-md border-2 px-6 py-2 text-sm font-bold transition hover:cursor-pointer ${isPrimary ? "border-pwr-primary text-pwr-primary hover:bg-pwr-primary hover:text-pwr-primary-foreground" : "border-pwr-primary-foreground text-pwr-primary-foreground hover:bg-pwr-primary-foreground hover:text-pwr-primary"}`,
         className,
       )}
       {...props}
