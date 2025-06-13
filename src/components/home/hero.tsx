@@ -17,15 +17,21 @@ export default function Hero() {
   }, []);
 
   return (
-    <section
-      className="relative grid h-[675px] place-items-center px-10 pb-4"
-      style={{
-        backgroundImage: "url('/bgs/hero-bg.jpg')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
-    >
-      <div className="bg-pwr-primary/50 absolute inset-0" />
+    <section className="relative grid h-[700px] place-items-center px-10 pb-4">
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute top-0 left-0 z-[-1] h-full w-full object-cover"
+      >
+        <source
+          src="/bgs/home-hero.mp4"
+          type="video/mp4"
+        />
+        Your browser does not support the video tag.
+      </video>
+      <div className="bg-pwr-primary/65 absolute inset-0" />
       <div className="text-pwr-primary-foreground relative z-10 flex flex-col items-center gap-12">
         <div className="space-y-3 text-center">
           <AnimatePresence mode="wait">
@@ -42,7 +48,7 @@ export default function Hero() {
           </AnimatePresence>
           <p className="text-xl font-medium">We Got You Covered.</p>
         </div>
-        <CustomButton>FREE QUOTE</CustomButton>
+        <CustomButton>FREE CONSULTATION</CustomButton>
       </div>
     </section>
   );

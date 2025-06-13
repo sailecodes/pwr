@@ -1,4 +1,5 @@
 import ContactUs from "@/components/app-layout/contact-us";
+import AssociatedCompanies from "@/components/home/associated-companies";
 
 export default function Contact() {
   return (
@@ -16,6 +17,7 @@ export default function Contact() {
           <ContactUs isOnPrimary />
         </div>
       </section>
+      <AssociatedCompanies />
     </main>
   );
 }

@@ -87,7 +87,7 @@ export default function ContactUs({ isOnPrimary }: { isOnPrimary?: boolean }) {
 
   return (
     <section
-      className={`mx-auto max-w-7xl space-y-8 px-10 py-8 lg:px-16 lg:py-12 ${isOnPrimary ? "text-pwr-primary-foreground" : "text-pwr-primary"}`}
+      className={`border-pwr-primary-muted-foreground mx-auto max-w-7xl space-y-8 rounded-lg px-10 py-8 shadow-[0_0_50px_rgba(0,0,0,0.20)] lg:px-16 lg:py-12 ${isOnPrimary ? "text-pwr-primary-foreground" : "text-pwr-primary"}`}
     >
       <header className="space-y-1">
         <p className="text-3xl font-extrabold">Contact Us</p>
