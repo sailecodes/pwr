@@ -1,5 +1,5 @@
 import ContactUs from "@/components/app-layout/contact-us";
-import AssociatedCompanies from "@/components/home/associated-companies";
+import AssociatedCompanies from "@/components/home/home-associated-companies";
 
 export default function Contact() {
   return (

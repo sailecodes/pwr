@@ -1,7 +1,7 @@
 import Marquee from "react-fast-marquee";
 import { homeAssociatedCompanies } from "@/lib/data";
 
-export default function AssociatedCompanies() {
+export default function HomeAssociatedCompanies() {
   return (
     <section className="overflow-hidden">
       <Marquee speed={40}>

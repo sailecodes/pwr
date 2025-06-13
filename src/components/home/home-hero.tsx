@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { homeHeroPhrases } from "@/lib/data";
 import CustomButton from "../general/custom-button";
 
-export default function Hero() {
+export default function HomeHero() {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {

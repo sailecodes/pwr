@@ -112,15 +112,15 @@ export const homeAssociatedCompanies = [
 export const homeGuarantees = [
   {
     icon: DollarSign,
-    header: "We Beat Any Quote — Guaranteed",
+    header: "We Beat Any Quote",
   },
   {
     icon: Building2,
-    header: "Enterprise-Level Solutions, Without Enterprise Pricing",
+    header: "Big Solutions, Small Price",
   },
   {
     icon: ThumbsUp,
-    header: "Work Done Right the First Time — Or We Fix It Free",
+    header: "Done Right. Or Free Fix.",
   },
 ];
 
