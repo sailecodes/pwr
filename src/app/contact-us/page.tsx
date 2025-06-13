@@ -1,4 +1,4 @@
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Mail, MapPin, Phone, PhoneCall } from "lucide-react";
 import ContactUs from "@/components/app-layout/contact-us-alt";
 import CustomButton from "@/components/general/custom-button";
 import AssociatedCompanies from "@/components/home/home-associated-companies";
@@ -30,10 +30,17 @@ export default function Contact() {
             />
             <span className="text-pwr-primary-foreground text-center font-bold">OR</span>
             <div className="text-pwr-primary-foreground flex flex-col gap-2 text-sm">
-              <div className="flex items-center gap-2">
-                <Phone />
-                <p>(949) 800-8953</p>
-              </div>
+              <a
+                href="tel:+19498008953"
+                className="text-pwr-primary-foreground hover:text-pwr-primary-foreground/80 flex items-center gap-2 transition-colors"
+                aria-label="Call us at (949) 800-8953"
+              >
+                <PhoneCall
+                  className="size-4"
+                  aria-hidden="true"
+                />
+                <span className="text-sm">(949) 800-8953</span>
+              </a>
               <div className="flex items-center gap-2">
                 <Mail />
                 <p>cp@powercoms.net</p>
