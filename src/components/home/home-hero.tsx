@@ -17,7 +17,7 @@ export default function HomeHero() {
   }, []);
 
   return (
-    <section className="relative grid h-[700px] place-items-center px-10 pb-4">
+    <section className="relative -top-[85.75px] grid h-[775px] place-items-center px-10 pt-[85.75px] pb-4">
       <video
         autoPlay
         muted
@@ -26,14 +26,15 @@ export default function HomeHero() {
         className="absolute top-0 left-0 z-[-1] h-full w-full object-cover"
       >
         <source
-          src="/bgs/home-hero.mp4"
+          src="/bgs/services-hero.mp4"
           type="video/mp4"
         />
         Your browser does not support the video tag.
       </video>
-      <div className="bg-pwr-primary/65 absolute inset-0" />
+      <div className="bg-pwr-primary/75 absolute inset-0" />
       <div className="text-pwr-primary-foreground relative z-10 flex flex-col items-center gap-12">
         <div className="space-y-3 text-center">
+          <p className="text-xl font-medium">Looking for,</p>
           <AnimatePresence mode="wait">
             <motion.p
               key={homeHeroPhrases[index]}
@@ -41,7 +42,7 @@ export default function HomeHero() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.5 }}
-              className="text-4xl font-extrabold"
+              className="text-3xl font-extrabold md:text-5xl"
             >
               {homeHeroPhrases[index]}
             </motion.p>

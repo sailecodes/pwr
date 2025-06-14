@@ -1,6 +1,6 @@
 "use client";
 
-import { Menu, PhoneCall } from "lucide-react";
+import { Menu, PhoneCall, X } from "lucide-react";
 import { motion, useScroll, useTransform } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
@@ -12,139 +12,161 @@ import CustomLink from "../general/custom-link";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "../ui/accordion";
 import NavLinks from "./nav-links";
 
-function NavAltMobileLinkSection({
+function NavAltMobileCategorySection({
   value,
   header,
-  services,
-  setIsMenuOpen,
+  data,
+  setIsMobileMenuOpen,
 }: {
   value: string;
   header: string;
-  services: { category: string; services: string[] }[];
-  setIsMenuOpen: Dispatch<SetStateAction<boolean>>;
+  data: { category: string; services: string[] }[];
+  setIsMobileMenuOpen: Dispatch<SetStateAction<boolean>>;
 }) {
   return (
-    <AccordionItem className="space-y-2" value={value}>
-      <AccordionTrigger className="text-2xl font-extrabold">{header}</AccordionTrigger>
+    <AccordionItem
+      className="space-y-2"
+      value={value}
+    >
+      <AccordionTrigger className="pb-0 text-2xl font-extrabold hover:cursor-pointer">{header}</AccordionTrigger>
       <AccordionContent>
-        <ul className="space-y-6">
-          {services.map((item, ind) => (
-            <li key={`${item.category}-${ind}`} className="space-y-3">
-              <header className="text-lg font-bold">{item.category}</header>
-              <ul className="text-pwr-primary-muted-foreground space-y-2">
-                {item.services.map((service, ind) => (
-                  <li
-                    key={`${item.category}-${service}-${ind}`}
-                    className="font-medium hover:cursor-pointer hover:text-gray-500"
+        <Accordion
+          type="single"
+          collapsible
+        >
+          {data.map(({ category, services }, ind) => (
+            <AccordionItem
+              value={`${category}-${ind}`}
+              key={`${category}-${ind}`}
+            >
+              <AccordionTrigger className="pt-3 pb-0 text-lg font-bold hover:cursor-pointer">
+                {category}
+              </AccordionTrigger>
+              <AccordionContent className="text-pwr-primary-muted-foreground flex flex-col space-y-2 pt-2 pb-3 text-base">
+                {services.map((service) => (
+                  <Link
+                    href={`/services/${formatToUrlString(category)}/${formatToUrlString(service)}`}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="font-medium hover:cursor-pointer hover:underline"
                   >
-                    <Link
-                      href={`/services/${formatToUrlString(item.category)}/${formatToUrlString(service)}`}
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      {service}
-                    </Link>
-                  </li>
+                    {service}
+                  </Link>
                 ))}
-              </ul>
-            </li>
+              </AccordionContent>
+            </AccordionItem>
           ))}
-        </ul>
+        </Accordion>
       </AccordionContent>
     </AccordionItem>
   );
 }
 
 function NavAltMobile({
-  setIsMenuOpen,
-  isMenuOpen,
+  setIsMobileMenuOpen,
+  isMobileMenuOpen,
 }: {
-  setIsMenuOpen: Dispatch<SetStateAction<boolean>>;
-  isMenuOpen: boolean;
+  setIsMobileMenuOpen: Dispatch<SetStateAction<boolean>>;
+  isMobileMenuOpen: boolean;
 }) {
   return (
-    <div className="text-pwr-primary-foreground flex items-center justify-between px-8">
-      <Link href="/">
-        <Image
-          src="/branding/pwrcom-white.png"
-          alt="Power Communications Logo"
-          width={160}
-          height={40}
-          priority
-        />
-      </Link>
-      <button className="hover:cursor-pointer" onClick={() => setIsMenuOpen((prev) => !prev)}>
-        <Menu className="size-8" />
-      </button>
-      <div
-        className={`absolute inset-0 top-[100%] z-35 h-[calc(100vh-100%)] w-screen ${isMenuOpen ? "" : "hidden"}`}
-      >
-        <div
-          className={`bg-pwr-primary ml-auto h-full overflow-y-auto p-10 ${isMenuOpen ? "" : "hidden"}`}
+    <>
+      <div className="flex items-center justify-center gap-2 bg-[#e7eaeb] py-2 md:hidden">
+        <PhoneCall className="size-4" />
+        <span className="text-xs font-medium">(949) 800-8953</span>
+      </div>
+      <div className="text-pwr-primary-foreground flex items-center justify-between px-8 py-4">
+        <Link href="/">
+          <Image
+            src="/branding/pwrcom-white.png"
+            alt="Power Communications Logo"
+            width={160}
+            height={40}
+            priority
+          />
+        </Link>
+        {/* Hamburger Icon */}
+        <button
+          className="hover:cursor-pointer"
+          onClick={() => setIsMobileMenuOpen((prev) => !prev)}
         >
-          <Accordion type="single" collapsible>
-            <NavAltMobileLinkSection
+          <Menu className="size-8" />
+        </button>
+        {/* Menu Items */}
+        <div
+          className={`bg-pwr-primary-foreground text-pwr-primary absolute inset-0 z-35 h-dvh w-dvw overflow-y-auto px-10 py-4 ${isMobileMenuOpen ? "" : "hidden"}`}
+        >
+          <button
+            onClick={() => setIsMobileMenuOpen(false)}
+            className="absolute top-[36px] right-[40px] hover:cursor-pointer"
+          >
+            <X />
+          </button>
+          <Accordion
+            type="single"
+            collapsible
+          >
+            <NavAltMobileCategorySection
               value="item-0"
               header="Services"
-              services={services}
-              setIsMenuOpen={setIsMenuOpen}
+              data={services}
+              setIsMobileMenuOpen={setIsMobileMenuOpen}
             />
           </Accordion>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 
 export default function NavAlt() {
-  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
+
   const isMobile = useIsMobile();
 
   const { scrollY } = useScroll();
-
   const backgroundColor = useTransform(
     scrollY,
     [0, 25, 50, 75, 100],
-    [
-      "transparent",
-      "rgba(19, 45, 56, 0.3)",
-      "rgba(19, 45, 56, 0.6)",
-      "rgba(19, 45, 56, 0.9)",
-      "rgba(19, 45, 56, 0.97)",
-    ],
+    ["transparent", "rgba(19, 45, 56, 0.3)", "rgba(19, 45, 56, 0.6)", "rgba(19, 45, 56, 0.7)", "rgba(19, 45, 56, 0.8)"],
   );
   const borderColor = useTransform(
     scrollY,
     [0, 25, 50, 75, 100],
-    [
-      "transparent",
-      "rgba(19, 45, 56, 0.3)",
-      "rgba(19, 45, 56, 0.6)",
-      "rgba(19, 45, 56, 0.9)",
-      "rgba(19, 45, 56, 0.97)",
-    ],
+    ["transparent", "rgba(19, 45, 56, 0.3)", "rgba(19, 45, 56, 0.6)", "rgba(19, 45, 56, 0.9)", "rgba(19, 45, 56, 1)"],
   );
-  const backdropFilter = useTransform(scrollY, [0, 25], ["blur(0px)", "blur(14px)"]);
+  const boxShadow = useTransform(scrollY, [0, 50], ["0 0 0 transparent", "0 4px 20px rgba(0, 0, 0, 0.1)"]);
+  const backdropFilter = useTransform(scrollY, [0, 50], ["blur(0px)", "blur(14px)"]);
 
   useEffect(() => {
-    if (isMenuOpen && isMobile) document.body.classList.add("overflow-hidden");
-    else document.body.classList.remove("overflow-hidden");
-    return () => document.body.classList.remove("overflow-hidden");
-  }, [isMenuOpen, isMobile]);
+    if (isMobileMenuOpen && isMobile) {
+      document.body.classList.add("overflow-hidden");
+    } else {
+      document.body.classList.remove("overflow-hidden");
+      setIsMobileMenuOpen(false);
+    }
+  }, [isMobileMenuOpen, isMobile]);
 
   return (
     <motion.nav
-      // style={{
-      //   backgroundColor,
-      //   borderColor,
-      //   backdropFilter,
-      // }}
-      className={`bg-pwr-primary sticky top-0 z-50 gap-4 py-4 ${isMenuOpen ? "bg-red-500" : ""}`}
+      style={{
+        backgroundColor,
+        borderColor,
+        backdropFilter,
+        boxShadow,
+      }}
+      className="sticky top-0 z-50"
     >
       {isMobile ? (
-        <NavAltMobile setIsMenuOpen={setIsMenuOpen} isMenuOpen={isMenuOpen} />
+        <NavAltMobile
+          setIsMobileMenuOpen={setIsMobileMenuOpen}
+          isMobileMenuOpen={isMobileMenuOpen}
+        />
       ) : (
-        <div className="mx-auto flex max-w-7xl items-center gap-8 px-10 lg:px-16">
-          <Link href="/" className="shrink-0">
+        <div className="mx-auto flex max-w-7xl items-center gap-8 px-10 py-4 lg:px-16">
+          <Link
+            href="/"
+            className="shrink-0"
+          >
             <Image
               src="/branding/pwrcom-white.png"
               alt="Power Communications Logo"
@@ -160,7 +182,10 @@ export default function NavAlt() {
             className="text-pwr-primary-foreground hover:text-pwr-primary-foreground/80 ml-auto flex items-center gap-2 transition-colors"
             aria-label="Call us at (949) 800-8953"
           >
-            <PhoneCall className="size-4" aria-hidden="true" />
+            <PhoneCall
+              className="size-4 shrink-0"
+              aria-hidden="true"
+            />
             <span className="text-sm">(949) 800-8953</span>
           </a>
         </div>

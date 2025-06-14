@@ -43,11 +43,12 @@
   --radius-xl: calc(var(--radius) + 4px);
 
   --breakpoint-hero-contact: 955px;
-  --breakpoint-nav-fit: 705px;
+
+  --color-white: #e7eaeb;
 
   --color-pwr-primary: #132d38;
-  --color-pwr-primary-foreground: #fff;
-  --color-pwr-primary-muted-foreground: #99a1af;
+  --color-pwr-primary-foreground: #e7eaeb;
+  --color-pwr-primary-muted-foreground: #718188;
 
   --bg: #132d38ee;
 }
