@@ -43,8 +43,9 @@ function NavAltMobileCategorySection({
                 {category}
               </AccordionTrigger>
               <AccordionContent className="text-pwr-primary-muted-foreground flex flex-col space-y-2 pt-2 pb-3 text-base">
-                {services.map((service) => (
+                {services.map((service, ind2) => (
                   <Link
+                    key={`${category}-${service}-${ind2}`}
                     href={`/services/${formatToUrlString(category)}/${formatToUrlString(service)}`}
                     onClick={() => setIsMobileMenuOpen(false)}
                     className="font-medium hover:cursor-pointer hover:underline"
