@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { PhoneCall } from "lucide-react";
 import localFont from "next/font/local";
 import Footer from "@/components/app-layout/footer";
 import NavAlt from "@/components/app-layout/nav-alt";
@@ -47,7 +48,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${gotham.className} mx-auto min-h-screen antialiased`}>
-        {/* <Nav /> */}
+        <div className="nav-fit:hidden flex items-center justify-center gap-2 py-2">
+          <PhoneCall className="size-4" />
+          <span className="text-xs">(949) 800-8953</span>
+        </div>
         <NavAlt />
         {children}
         <Footer />

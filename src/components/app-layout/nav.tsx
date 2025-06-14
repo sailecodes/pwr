@@ -58,15 +58,8 @@ export default function Nav() {
     >
       {isMobile ? (
         <div className="text-pwr-primary-foreground flex items-center justify-between p-4">
-          <img
-            src={"/branding/pwrcom-white.png"}
-            alt="Company Logo"
-            width={160}
-          />
-          <button
-            className="hover:cursor-pointer"
-            onClick={() => setIsMenuOpen((prev) => !prev)}
-          >
+          <img src={"/branding/pwrcom-white.png"} alt="Company Logo" width={160} />
+          <button className="hover:cursor-pointer" onClick={() => setIsMenuOpen((prev) => !prev)}>
             <Menu className="size-8" />
           </button>
           <div
@@ -104,16 +97,12 @@ export default function Nav() {
         </div>
       ) : (
         <div className="mx-auto flex max-w-7xl items-center gap-8 px-16">
-          <img
-            src={"/branding/pwrcom-white.png"}
-            alt="Company Logo"
-            width={180}
-          />
+          <img src={"/branding/pwrcom-white.png"} alt="Company Logo" width={180} />
           <NavLinks />
           <CustomLink href="/contact-us">FREE CONSULTATION</CustomLink>
           <div className="text-pwr-primary-foreground ml-auto flex items-center gap-2">
             <PhoneCall />
-            <span>555-666-1234</span>
+            <span>(949) 800-8953</span>
           </div>
         </div>
       )}
