@@ -1,26 +1,29 @@
 import { Resend } from "resend";
-import { EmailTemplate } from "../../../components/email-template";
+import { ContactUsFormEmail } from "../../../../emails/contactUsForm";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(request: Request) {
   try {
-    const formData = await request.json();
-    const { firstName, lastName, email, phoneNumber, zipCode, message } = formData;
-
+    const { firstName, lastName, email, phoneNumber, zipCode, message } = await request.json();
     const { data, error } = await resend.emails.send({
-      from: "PWR Communications <onboarding@resend.dev>",
-      to: [process.env.RESEND_TO_EMAIL || "delivered@resend.dev"],
-      subject: "New Contact Form Submission",
-      react: EmailTemplate({ firstName, lastName, email, phoneNumber, zipCode, message }),
+      from: "Power Communications <noreply@pwrcoms.com>",
+      to: "cp@powercoms.net",
+      subject: `New Contact Form Submission from ${firstName} ${lastName}`,
+      react: ContactUsFormEmail({
+        firstName,
+        lastName,
+        email,
+        phoneNumber,
+        zipCode,
+        message,
+      }),
     });
-
     if (error) {
-      return Response.json({ error }, { status: 500 });
+      return Response.json({ error }, { status: 400 });
     }
-
-    return Response.json(data);
+    return Response.json({ data }, { status: 200 });
   } catch (error) {
-    return Response.json({ error }, { status: 500 });
+    return Response.json({ error: "Internal server error" }, { status: 500 });
   }
 }
