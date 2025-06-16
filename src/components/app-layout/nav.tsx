@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils";
 import CustomButton from "../general/custom-button";
 import CustomLink from "../general/custom-link";
 import { Separator } from "../ui/separator";
-import NavLinks from "./nav-links";
+import NavLinks from "./nav-non-mobile-menu";
 
 export default function Nav() {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);

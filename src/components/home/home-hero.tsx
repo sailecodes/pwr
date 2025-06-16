@@ -17,7 +17,7 @@ export default function HomeHero() {
   }, []);
 
   return (
-    <section className="relative -top-[85.75px] grid h-[775px] place-items-center px-10 pt-[85.75px] pb-4">
+    <section className="relative -top-[85.75px] grid h-dvh place-items-center px-10 pt-[85.75px] pb-4">
       <video
         autoPlay
         muted
@@ -25,10 +25,7 @@ export default function HomeHero() {
         playsInline
         className="absolute top-0 left-0 z-[-1] h-full w-full object-cover"
       >
-        <source
-          src="/bgs/services-hero.mp4"
-          type="video/mp4"
-        />
+        <source src="/bgs/services-hero.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
       <div className="bg-pwr-primary/75 absolute inset-0" />
