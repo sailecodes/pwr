@@ -44,11 +44,12 @@
 
   --breakpoint-hero-contact: 955px;
 
-  --color-white: #e7eaeb;
-
   --color-pwr-primary: #132d38;
   --color-pwr-primary-foreground: #e7eaeb;
-  --color-pwr-primary-muted-foreground: #718188;
+  --color-pwr-primary-muted-foreground: #b8c0c3;
+
+  --color-foreground: #e7eaeb;
+  --color-muted-foreground: #718188;
 
   --bg: #132d38ee;
 }

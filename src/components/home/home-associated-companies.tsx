@@ -3,7 +3,7 @@ import { homeAssociatedCompanies } from "@/lib/data";
 
 export default function HomeAssociatedCompanies() {
   return (
-    <section className="overflow-hidden py-6">
+    <section className="relative -top-[35px] overflow-hidden py-6">
       <Marquee speed={40}>
         {homeAssociatedCompanies.map((src, ind) => (
           <img

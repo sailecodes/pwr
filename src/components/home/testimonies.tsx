@@ -23,7 +23,7 @@ function TestimoniesCard({
           <p className="text-sm">{name}</p>
         </div>
       </header>
-      <p className="text-sm">{review}</p>
+      <p className="line-clamp-4 text-sm">{review}</p>
       <div className="flex gap-1">
         {Array.from({ length: fullStars }, (_, ind) => (
           <Star
