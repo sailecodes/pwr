@@ -75,7 +75,7 @@ export default function Footer() {
             width={150}
           />
           <div className="space-y-2">
-            <header className="font-semibold">We're highly rated!</header>
+            <header className="font-semibold">We&apos;re highly rated!</header>
             <p className="text-pwr-primary-muted-foreground text-xs">
               Power Communications is proud to be a 5-star rated company on Google — thanks to the trust of our
               incredible clients.
