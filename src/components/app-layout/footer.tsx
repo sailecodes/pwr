@@ -1,78 +1,7 @@
 import { Mail, MapPin, PhoneCall } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
 import { siInstagram } from "simple-icons/icons";
-import { services } from "@/lib/data";
-import { formatToUrlString } from "@/lib/utils";
-import CustomLink from "../general/custom-link";
 import SVGIconLink from "../general/svg-icon-link";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "../ui/accordion";
-
-function FooterNoncollapsibleSection({
-  header,
-  content,
-}: {
-  header: string;
-  content: { subheader: string; href: string }[];
-}) {
-  return (
-    <div>
-      <header className="mb-4 text-2xl font-extrabold">{header}</header>
-      <ul>
-        {content.map((item, ind) => (
-          <li key={`${header}-${item.subheader}-${ind}`} className="py-[6px]">
-            <Link href={item.href} className="text-sm font-medium hover:text-[#ddd]">
-              {item.subheader}
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-}
-
-function FooterCollapsibleSection({
-  header,
-  content,
-}: {
-  header: string;
-  content: { category: string; services: string[] }[];
-}) {
-  return (
-    <div className="w-[325px]">
-      <header className="mb-4 text-2xl font-extrabold">{header}</header>
-      <Accordion type="single" collapsible>
-        {content.map((item, ind) => (
-          <AccordionItem
-            key={`${item.category}-${ind}`}
-            value={`item-${ind}`}
-            className="border-none"
-          >
-            <AccordionTrigger className="py-2 hover:cursor-pointer hover:text-[#ddd] hover:no-underline">
-              {item.category}
-            </AccordionTrigger>
-            <AccordionContent className="pb-2">
-              <ul className="text-pwr-primary-muted-foreground space-y-1">
-                {item.services.map((service, ind2) => (
-                  <li
-                    key={`${service}-${ind2}`}
-                    className="text-sm font-medium hover:cursor-pointer hover:text-gray-500"
-                  >
-                    <Link
-                      href={`/services/${formatToUrlString(item.category)}/${formatToUrlString(service)}`}
-                    >
-                      {service}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </AccordionContent>
-          </AccordionItem>
-        ))}
-      </Accordion>
-    </div>
-  );
-}
 
 export default function Footer() {
   return (
@@ -112,7 +41,7 @@ export default function Footer() {
             <div className="flex items-center gap-2">
               <MapPin className="stroke-pwr-primary-muted-foreground size-4 shrink-0" />
               <p className="text-pwr-primary-muted-foreground">
-                10842 Noel Street #109, Cypress, CA
+                10842 Noel Street #109, Cypress, CA 90720
               </p>
             </div>
           </div>
@@ -137,7 +66,7 @@ export default function Footer() {
                   aria-hidden="true"
                 />
                 <span className="text-pwr-primary-muted-foreground underline underline-offset-2">
-                  criz@powercoms.com
+                  cp@powercoms.net
                 </span>
               </a>
             </div>

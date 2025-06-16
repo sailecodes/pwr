@@ -25,7 +25,7 @@ export function NavNonMobileMenuItemStack({
       <NavigationMenuTrigger className='data-[state=open]:text-pwr-primary-foreground focus-visible:ring-ring/50 hover:text-pwr-primary-foreground focus:text-pwr-primary-foreground data-[state=open]:focus:bg-transparent" bg-transparent outline-none hover:bg-transparent focus:bg-transparent active:bg-transparent data-[state=open]:bg-transparent data-[state=open]:hover:bg-transparent'>
         {trigger}
       </NavigationMenuTrigger>
-      <NavigationMenuContent className="overflow-y-scroll [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-gray-300 [&::-webkit-scrollbar-track]:rounded-full [&::-webkit-scrollbar-track]:bg-gray-100">
+      <NavigationMenuContent>
         <Accordion type="single" collapsible className="w-[300px] space-y-3 px-4 py-3">
           {data.map(({ category, services }, ind) => (
             <AccordionItem

@@ -8,16 +8,16 @@ import Testimonies from "@/components/home/testimonies";
 
 export default function Home() {
   return (
-    <main className="space-y-12">
+    <main>
       <HomeHero />
-      <HomeAssociatedCompanies />
-      <HomeGuarantees />
-      <Testimonies />
-      <Specialties />
-      <Stats />
-      {/* <Process /> */}
-      {/* <Videos /> */}
-      <ContactUs />
+      <div className="relative -top-[85.75px] space-y-8">
+        <HomeAssociatedCompanies />
+        <HomeGuarantees />
+        <Testimonies />
+        <Specialties />
+        <Stats />
+        <ContactUs />
+      </div>
     </main>
   );
 }

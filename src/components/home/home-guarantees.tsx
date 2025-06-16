@@ -13,7 +13,7 @@ function HomeGuaranteesCard({ icon: Icon, header }: { icon: ElementType; header:
 
 export default function HomeGuarantees() {
   return (
-    <section className="mx-auto flex max-w-7xl flex-col items-center gap-12 px-10 py-8 lg:px-16 lg:py-12">
+    <section className="mx-auto flex max-w-7xl flex-col items-center gap-12 px-10 py-8 lg:px-20 lg:py-16">
       <header className="text-pwr-primary text-center text-3xl font-extrabold">
         Our Guarantees
       </header>

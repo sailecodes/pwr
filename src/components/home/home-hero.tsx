@@ -17,7 +17,7 @@ export default function HomeHero() {
   }, []);
 
   return (
-    <section className="relative -top-[85.75px] grid h-dvh place-items-center px-10 pt-[85.75px] pb-4">
+    <section className="relative -top-[85.75px] grid h-dvh place-items-center px-10 pt-[85.75px] pb-6">
       <video
         autoPlay
         muted
