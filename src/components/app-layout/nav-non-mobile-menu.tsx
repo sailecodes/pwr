@@ -26,23 +26,22 @@ export function NavNonMobileMenuItemStack({
         {trigger}
       </NavigationMenuTrigger>
       <NavigationMenuContent>
-        <Accordion type="single" collapsible className="w-[300px] space-y-3 px-4 py-3">
+        <Accordion
+          type="single"
+          collapsible
+          className="w-[300px] space-y-3 px-4 py-3">
           {data.map(({ category, services }, ind) => (
             <AccordionItem
               key={`${category}-${ind}`}
               value={`${category}-${ind}`}
-              className="border-none"
-            >
-              <AccordionTrigger className="p-0 font-medium hover:cursor-pointer">
-                {category}
-              </AccordionTrigger>
-              <AccordionContent className="text-pwr-primary-muted-foreground flex flex-col gap-2 py-2">
+              className="border-none">
+              <AccordionTrigger className="p-0 font-medium hover:cursor-pointer">{category}</AccordionTrigger>
+              <AccordionContent className="text-bg-muted-foreground flex flex-col gap-2 py-2">
                 {services.map((service, ind2) => (
                   <Link
                     key={`${category}-${service}-${ind2}`}
                     href={`/services/${formatToUrlString(category)}/${formatToUrlString(service)}`}
-                    className="hover:underline"
-                  >
+                    className="hover:underline">
                     {service}
                   </Link>
                 ))}
@@ -61,8 +60,7 @@ function NavNonMobileMenuItemSingle({ href, trigger }: { href: string; trigger: 
       <NavigationMenuLink asChild>
         <Link
           href={href}
-          className="hover:text-pwr-primary-foreground focus:text-pwr-primary-foreground underline-offset-2 hover:bg-transparent hover:underline focus:bg-transparent active:bg-transparent"
-        >
+          className="hover:text-pwr-primary-foreground focus:text-pwr-primary-foreground underline-offset-2 hover:bg-transparent hover:underline focus:bg-transparent active:bg-transparent">
           {trigger}
         </Link>
       </NavigationMenuLink>
@@ -74,8 +72,14 @@ export default function NavNonMobileMenu() {
   return (
     <NavigationMenu className="text-pwr-primary-foreground flex items-center gap-8 font-medium">
       <NavigationMenuList>
-        <NavNonMobileMenuItemSingle href="/" trigger="Home" />
-        <NavNonMobileMenuItemStack trigger="Services" data={services} />
+        <NavNonMobileMenuItemSingle
+          href="/"
+          trigger="Home"
+        />
+        <NavNonMobileMenuItemStack
+          trigger="Services"
+          data={services}
+        />
       </NavigationMenuList>
     </NavigationMenu>
   );

@@ -27,7 +27,7 @@ function TestimoniesCard({
       <div className="flex gap-1">
         {Array.from({ length: fullStars }, (_, ind) => (
           <Star
-            key={`${company}-${name}-star-full-${ind}`}
+            key={`${company}-${name}-${ind}`}
             color="yellow"
             fill="yellow"
             className="size-4"
@@ -35,7 +35,6 @@ function TestimoniesCard({
         ))}
         {hasHalfStar && (
           <StarHalf
-            key={`${company}-${name}-star-half`}
             color="yellow"
             fill="yellow"
             className="size-4"
@@ -49,21 +48,19 @@ function TestimoniesCard({
 export default function Testimonies() {
   return (
     <section className="bg-pwr-primary text-pwr-primary-foreground">
-      <div className="mx-auto max-w-7xl space-y-8 px-10 py-14 lg:p-16">
+      <div className="mx-auto max-w-7xl space-y-8 px-10 py-8 lg:py-16">
         <header className="space-y-1">
           <p className="text-3xl font-extrabold">Why POWERCOM?</p>
-          <p className="text-pwr-primary-muted-foreground text-lg font-bold">
-            Don&apos;t Just Take Our Word For It...
-          </p>
+          <p className="text-pwr-primary-muted-foreground text-lg font-bold">Don&apos;t Just Take Our Word For It...</p>
         </header>
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-          {homeTestimonies.map((val, ind) => (
+        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
+          {homeTestimonies.map(({ company, review, rating, name }, ind) => (
             <TestimoniesCard
-              key={`${val.company}-${val.name}-review-${ind}`}
-              company={val.company}
-              name={val.name}
-              review={val.review}
-              rating={val.rating}
+              key={`${company}-${name}-review-${ind}`}
+              company={company}
+              name={name}
+              review={review}
+              rating={rating}
             />
           ))}
         </div>

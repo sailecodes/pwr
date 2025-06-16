@@ -34,9 +34,8 @@ function CustomFormField({
       render={({ field }) => (
         <FormItem
           className={cn(className)}
-          {...props}
-        >
-          <FormLabel>{label}</FormLabel>
+          {...props}>
+          <FormLabel className="data-[error=true]:text-red-500">{label}</FormLabel>
           <FormControl>
             {isTextarea ? (
               <Textarea
@@ -52,7 +51,7 @@ function CustomFormField({
               />
             )}
           </FormControl>
-          <FormMessage />
+          <FormMessage className="text-red-500" />
         </FormItem>
       )}
     />
@@ -93,8 +92,7 @@ export default function ContactUs({
 
   return (
     <section
-      className={`mx-auto max-w-7xl space-y-8 ${isPrimaryForeground ? "text-pwr-primary-foreground" : "text-pwr-primary"}`}
-    >
+      className={`mx-auto max-w-7xl space-y-8 ${isPrimaryForeground ? "text-pwr-primary-foreground" : "text-pwr-primary"}`}>
       <header className="space-y-1">
         <p className="text-3xl font-extrabold">Contact Us</p>
         <p className="text-lg font-bold">Even if you just have some questions!</p>
@@ -102,8 +100,7 @@ export default function ContactUs({
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit)}
-          className={cn("grid gap-4", classNames ? classNames.form : "")}
-        >
+          className={cn("grid gap-4", classNames ? classNames.form : "")}>
           <CustomFormField
             control={form.control}
             name="firstName"
@@ -151,8 +148,7 @@ export default function ContactUs({
           />
           <CustomButton
             isPrimary={!isPrimaryForeground}
-            className="mx-auto mt-4 w-fit sm:col-span-full"
-          >
+            className="mx-auto mt-4 w-fit sm:col-span-full">
             GET YOUR QUOTE NOW
           </CustomButton>
         </form>

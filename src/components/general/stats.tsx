@@ -40,10 +40,9 @@ export default function Stats({
         backgroundImage: "url('/bgs/stats-bg.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
-      }}
-    >
+      }}>
       <div className="bg-pwr-primary/85 absolute inset-0" />
-      <div className="relative z-10 mx-auto grid max-w-7xl gap-12 px-10 py-14 md:grid-cols-3 md:gap-24 lg:px-16 lg:py-24">
+      <div className="relative z-10 mx-auto grid max-w-7xl gap-12 px-10 py-14 md:grid-cols-3 md:gap-24 lg:py-24">
         {homeStats.map((stat, ind) => (
           <StatsCard
             key={`${stat.stat}-${stat.text}-${ind}`}

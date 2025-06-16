@@ -1,6 +1,6 @@
 import { ElementType } from "react";
 import { homeGuarantees } from "@/lib/data";
-import CustomButton from "../general/custom-button";
+import CustomLink from "../general/custom-link";
 
 function HomeGuaranteesCard({ icon: Icon, header }: { icon: ElementType; header: string }) {
   return (
@@ -14,9 +14,7 @@ function HomeGuaranteesCard({ icon: Icon, header }: { icon: ElementType; header:
 export default function HomeGuarantees() {
   return (
     <section className="mx-auto flex max-w-7xl flex-col items-center gap-12 px-10 py-8 lg:px-20 lg:py-16">
-      <header className="text-pwr-primary text-center text-3xl font-extrabold">
-        Our Guarantees
-      </header>
+      <header className="text-pwr-primary text-center text-3xl font-extrabold">Our Guarantees</header>
       <div className="grid grid-rows-3 gap-8 md:grid-cols-3 md:grid-rows-1">
         {homeGuarantees.map((guarantee, ind) => (
           <HomeGuaranteesCard
@@ -26,7 +24,11 @@ export default function HomeGuarantees() {
           />
         ))}
       </div>
-      <CustomButton isPrimary>FREE CONSULTATION</CustomButton>
+      <CustomLink
+        href="/contact-us"
+        isPrimary>
+        FREE CONSULTATION
+      </CustomLink>
     </section>
   );
 }

@@ -2,15 +2,7 @@ import { ElementType } from "react";
 import { homeSpecialties } from "@/lib/data";
 import CustomLink from "../general/custom-link";
 
-function SpecialtiesCard({
-  icon: Icon,
-  header,
-  text,
-}: {
-  icon: ElementType;
-  header: string;
-  text: string;
-}) {
+function SpecialtiesCard({ icon: Icon, header, text }: { icon: ElementType; header: string; text: string }) {
   return (
     <div className="flex gap-2 rounded-md px-8 py-6 hover:bg-gray-100 hover:shadow-md">
       <Icon className="shrink-0" />
@@ -24,7 +16,7 @@ function SpecialtiesCard({
 
 export default function Specialties() {
   return (
-    <section className="text-pwr-primary mx-auto flex max-w-7xl flex-col gap-8 px-10 py-8 lg:px-16 lg:py-12">
+    <section className="text-pwr-primary mx-auto flex max-w-7xl flex-col gap-8 px-10 py-8 lg:py-16">
       <header className="text-3xl font-extrabold">Our Specialties</header>
       <div className="grid gap-4 md:grid-cols-2">
         {homeSpecialties.map((specialty, ind) => (
@@ -39,8 +31,7 @@ export default function Specialties() {
       <CustomLink
         href="/contact-us"
         isPrimary
-        className="mx-auto w-fit"
-      >
+        className="mx-auto w-fit">
         FREE CONSULTATION
       </CustomLink>
     </section>

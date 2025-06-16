@@ -15,7 +15,7 @@ export default function ServicesHelp({
   data: { header: string; description: string }[];
 }) {
   return (
-    <section className="text-pwr-primary mx-auto max-w-7xl space-y-6 px-10 py-8 lg:px-16 lg:py-12">
+    <section className="text-pwr-primary mx-auto max-w-7xl space-y-6 px-10 py-8 lg:py-16">
       <header className="text-3xl leading-8 font-extrabold">How Will {service} Help You?</header>
       <div className="grid gap-6 md:grid-cols-3 md:gap-12">
         {data.map((help, ind) => (

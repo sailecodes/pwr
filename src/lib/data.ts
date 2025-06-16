@@ -1,14 +1,4 @@
-import {
-  Antenna,
-  Building2,
-  DollarSign,
-  ListTreeIcon,
-  Server,
-  ThumbsUp,
-  Tv2,
-  Video,
-  Zap,
-} from "lucide-react";
+import { Antenna, Building2, DollarSign, ListTreeIcon, Server, ThumbsUp, Tv2, Video, Zap } from "lucide-react";
 import { EStatType } from "./enums";
 
 export const navServiceCategories = [
@@ -233,11 +223,7 @@ export const services = [
   },
   {
     category: "Fiber Optics",
-    services: [
-      "Fiber Installation and Infrastructure",
-      "Fiber Splicing and Testing",
-      "Residential & Multi-Tenant",
-    ],
+    services: ["Fiber Installation and Infrastructure", "Fiber Splicing and Testing", "Residential & Multi-Tenant"],
   },
   {
     category: "Electrical Services",
@@ -269,12 +255,7 @@ export const services = [
   },
   {
     category: "Security Services",
-    services: [
-      "Video Surveillance Systems",
-      "Access Control Systems",
-      "Alarm Systems",
-      "Intercom & PA Systems",
-    ],
+    services: ["Video Surveillance Systems", "Access Control Systems", "Alarm Systems", "Intercom & PA Systems"],
   },
 ];
 
@@ -293,7 +274,7 @@ export const services2 = [
           "At Power Communications, our Managed IT Services provide full-spectrum technology support designed to keep your business running securely, efficiently, and without interruptions. From day-to-day help desk support to long-term infrastructure management, we become your dedicated IT partner — allowing you to focus on what matters most: growing your business.",
         help: [
           {
-            header: "Reduce Downtime & Boost Productivity",
+            header: "Boost Productivity",
             description:
               "Our proactive monitoring and rapid response support minimize technical issues before they escalate, keeping your team focused and operations running smoothly.",
           },
@@ -303,7 +284,7 @@ export const services2 = [
               "No more guessing games. We handle updates, troubleshooting, data backups, and vendor coordination — so you don’t have to.",
           },
           {
-            header: "Scalable Support That Grows With You",
+            header: "Scalable Support",
             description:
               "Whether you're a startup or a multi-site business, our flexible IT solutions expand with your needs, ensuring tech never becomes a bottleneck.",
           },
