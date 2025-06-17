@@ -13,6 +13,7 @@ export function getUrlString(str: string): string {
     if (word.toLowerCase() === "it") return "IT";
     else if (word.toLowerCase() === "voip") return "VoIP";
     else if (word.toLowerCase() === "ip") return "IP";
+    else if (word.toLowerCase() === "%26") return "&";
 
     return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
   });
@@ -25,9 +26,8 @@ export function formatToUrlString(str: string) {
 }
 
 export function isValidPair(category: string, service: string) {
-  return services2.some(
-    (e) => e.category === category && !!e.services.find((e2) => e2.service === service),
-  );
+  console.log(category, " ", service);
+  return services2.some((e) => e.category === category && !!e.services.find((e2) => e2.service === service));
 }
 
 export function findServiceByCategoryAndName(category: string, service: string) {
