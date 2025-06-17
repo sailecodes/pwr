@@ -68,13 +68,19 @@ export default function Footer() {
           </div>
         </div>
         {/* LAST */}
-        <div className="space-y-1">
-          <img
-            src="/imgs/google-reviews.png"
-            alt="Google Reviews"
-            width={150}
-          />
-          <div className="space-y-2">
+        <div>
+          <a
+            className="inline-block"
+            href="https://www.google.com/search?sca_esv=fd599a1fe1c4edc0&rlz=1C1ASUM_enUS970US970&sxsrf=AE3TifMJo8g4UuQCfiCIwnIDnhxsZU-LGg:1750111089492&kgmid=/g/11r3q_xsd4&q=Power+Communications&shndl=30&shem=lcuae,uaasie&source=sh/x/loc/uni/m1/1&kgs=5a32344f9e3dfeec"
+            target="_blank"
+            rel="noopener noreferrer">
+            <img
+              src="/imgs/google-reviews.png"
+              alt="Google Reviews"
+              width={150}
+            />
+          </a>
+          <div className="mt-1 space-y-2">
             <header className="font-semibold">We&apos;re highly rated!</header>
             <p className="text-pwr-primary-muted-foreground text-xs">
               Power Communications is proud to be a 5-star rated company on Google — thanks to the trust of our

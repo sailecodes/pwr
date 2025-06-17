@@ -18,7 +18,7 @@ export default function Home() {
         <Stats />
       </div>
       <div className="mb-[85.75px] px-10">
-        <div className="mx-auto max-w-4xl rounded-lg px-10 py-8 shadow-[0_0_50px_rgba(0,0,0,0.20)] lg:py-16">
+        <div className="mx-auto max-w-4xl rounded-lg px-10 py-8 shadow-[0_0_50px_rgba(0,0,0,0.20)]">
           <ContactUs classNames={{ form: "sm:grid-cols-2" }} />
         </div>
       </div>

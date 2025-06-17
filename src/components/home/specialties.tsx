@@ -16,7 +16,7 @@ function SpecialtiesCard({ icon: Icon, header, text }: { icon: ElementType; head
 
 export default function Specialties() {
   return (
-    <section className="text-pwr-primary mx-auto flex max-w-7xl flex-col gap-8 px-10 py-8 lg:py-16">
+    <section className="text-pwr-primary mx-auto flex max-w-7xl flex-col gap-8 px-10 py-4">
       <header className="text-3xl font-extrabold">Our Specialties</header>
       <div className="grid gap-4 md:grid-cols-2">
         {homeSpecialties.map((specialty, ind) => (

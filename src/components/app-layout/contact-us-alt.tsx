@@ -15,6 +15,7 @@ function CustomFormField({
   name,
   label,
   placeholder,
+  type,
   isTextarea,
   isPrimaryForeground,
   className,
@@ -24,6 +25,7 @@ function CustomFormField({
   name: string;
   label: string;
   placeholder: string;
+  type?: string;
   isTextarea?: boolean;
   isPrimaryForeground?: boolean;
 }) {
@@ -45,9 +47,15 @@ function CustomFormField({
               />
             ) : (
               <Input
-                className={`rounded-sm text-sm ${isPrimaryForeground ? "bg-pwr-primary-foreground text-pwr-primary" : "border-pwr-primary/30"}`}
+                className={`file:text-pwr-primary rounded-sm text-sm file:border-0 file:bg-transparent file:text-sm file:font-medium ${
+                  isPrimaryForeground ? "bg-pwr-primary-foreground text-pwr-primary" : "border-pwr-primary/30"
+                }`}
+                type={type}
                 placeholder={placeholder}
-                {...field}
+                onChange={
+                  type === "file" ? (e) => field.onChange(e.target.files?.[0]) : (e) => field.onChange(e.target.value)
+                }
+                accept={type === "file" ? ".pdf,.doc,.docx,.txt,.jpg,.jpeg,.png" : undefined}
               />
             )}
           </FormControl>
@@ -73,16 +81,27 @@ export default function ContactUs({
       email: "",
       phoneNumber: "",
       zipCode: "",
+      attachment: undefined,
       message: "",
     },
   });
   async function onSubmit(vals: z.infer<typeof contactUsSchema>) {
+    const formData = new FormData();
+
+    formData.append("firstName", vals.firstName);
+    formData.append("lastName", vals.lastName);
+    formData.append("email", vals.email);
+    formData.append("phoneNumber", vals.phoneNumber);
+    formData.append("zipCode", vals.zipCode);
+    formData.append("message", vals.message);
+
+    if (vals.attachment) {
+      formData.append("attachment", vals.attachment as File);
+    }
+
     const res = await fetch("/api/send", {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(vals),
+      body: formData,
     });
 
     if (!res.ok) {
@@ -134,7 +153,14 @@ export default function ContactUs({
             name="zipCode"
             label="Zip Code"
             placeholder="12345"
-            className="sm:col-span-full"
+            isPrimaryForeground={isPrimaryForeground}
+          />
+          <CustomFormField
+            control={form.control}
+            name="attachment"
+            label="Attachment"
+            type="file"
+            placeholder="12345"
             isPrimaryForeground={isPrimaryForeground}
           />
           <CustomFormField

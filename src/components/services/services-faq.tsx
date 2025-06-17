@@ -15,7 +15,7 @@ function ServicesFAQItem({ value, question, answer }: { value: string; question:
 
 export default function ServicesFAQ({ faqData }: { faqData: { question: string; answer: string }[] }) {
   return (
-    <section className="text-pwr-primary mx-auto max-w-7xl space-y-6 px-10 pt-8 lg:pt-16">
+    <section className="text-pwr-primary mx-auto max-w-7xl space-y-8 px-10 pt-4">
       <header className="text-3xl leading-8 font-extrabold">FAQ</header>
       <Accordion
         type="single"

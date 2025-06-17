@@ -43,7 +43,7 @@ export default function ServicesHero({
             ))}
           </ul>
         </div>
-        <div className="bg-pwr-primary relative w-full rounded-md p-8 shadow-[0_0_50px_rgba(0,0,0,0.35)] sm:w-fit lg:px-14 lg:py-16">
+        <div className="bg-pwr-primary relative w-full rounded-md px-10 py-8 shadow-[0_0_50px_rgba(0,0,0,0.35)] sm:w-fit">
           <ContactUs
             isPrimaryForeground
             classNames={{ form: "hero-contact:grid-cols-2" }}

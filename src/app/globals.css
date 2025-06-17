@@ -44,6 +44,10 @@
 
   --breakpoint-hero-contact: 955px;
 
+  --breakpoint-830: 830px;
+  --breakpoint-1190: 1190px;
+  --breakpoint-510: 450px;
+
   --color-pwr-primary: #132d38;
   --color-pwr-primary-foreground: #e7eaeb;
   --color-pwr-primary-muted-foreground: #b8c0c3;

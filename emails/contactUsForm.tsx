@@ -9,6 +9,7 @@ export const ContactUsFormEmail = ({
   phoneNumber,
   zipCode,
   message,
+  attachment,
 }: {
   firstName: string;
   lastName: string;
@@ -16,6 +17,7 @@ export const ContactUsFormEmail = ({
   phoneNumber: string;
   zipCode: string;
   message: string;
+  attachment?: File | null;
 }) => {
   return (
     <Html>
@@ -32,10 +34,18 @@ export const ContactUsFormEmail = ({
               Phone Number: {phoneNumber} <br />
               Zip Code: {zipCode}
               <br />
-              <br />
-              Message:
+              <br /> Message:
               <br />
               {message}
+              <br />
+              <br />
+              {attachment && (
+                <>
+                  Attachment:
+                  <br />
+                  {attachment.name} ({Math.round(attachment.size / 1024)} KB)
+                </>
+              )}
             </Text>
           </Section>
         </Container>
