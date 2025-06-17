@@ -223,7 +223,7 @@ export const services = [
   },
   {
     category: "Fiber Optics",
-    services: ["Fiber Installation and Infrastructure", "Fiber Splicing & Testing", "Residential & Multi-Tenant Fiber"],
+    services: ["Fiber Installation & Infrastructure", "Fiber Splicing & Testing", "Residential & Multi-Tenant Fiber"],
   },
   {
     category: "Electrical Services",
@@ -237,10 +237,10 @@ export const services = [
   },
   {
     category: "Distributed Antenna System (DAS)",
-    services: ["DAS Design and Installation"],
+    services: ["DAS Design & Installation"],
   },
   {
-    category: "Audio and Visual",
+    category: "Audio & Visual",
     services: [
       "Sound System Design & Installation",
       "Visual Display Solutions",
@@ -1171,7 +1171,7 @@ export const services2 = [
     category: "Distributed Antenna System (DAS)",
     services: [
       {
-        service: "DAS Design and Installation",
+        service: "DAS Design & Installation",
         mainPoints: [
           "Seamless Cellular & Emergency Radio Coverage",
           "Designed for Stadiums, Hospitals, Campuses & High-Rises",
