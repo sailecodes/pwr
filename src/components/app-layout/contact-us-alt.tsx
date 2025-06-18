@@ -138,7 +138,7 @@ export default function ContactUs({
         fileInputRef.current.value = "";
       }
     }
-  }, [form.formState.isSubmitSuccessful]);
+  }, [form.formState.isSubmitSuccessful, form]);
 
   return (
     <section
