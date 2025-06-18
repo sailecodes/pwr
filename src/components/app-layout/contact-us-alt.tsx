@@ -1,5 +1,6 @@
 "use client";
 
+import { RefObject, useEffect, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { contactUsSchema } from "@/lib/schemas";
@@ -15,8 +16,9 @@ function CustomFormField({
   name,
   label,
   placeholder,
-  type,
+  fileInputRef,
   isTextarea,
+  isFileInput,
   isPrimaryForeground,
   className,
   ...props
@@ -25,8 +27,9 @@ function CustomFormField({
   name: string;
   label: string;
   placeholder: string;
-  type?: string;
+  fileInputRef?: RefObject<HTMLInputElement | null>;
   isTextarea?: boolean;
+  isFileInput?: boolean;
   isPrimaryForeground?: boolean;
 }) {
   return (
@@ -38,28 +41,42 @@ function CustomFormField({
           className={cn(className)}
           {...props}>
           <FormLabel className="data-[error=true]:text-red-500">{label}</FormLabel>
-          <FormControl>
-            {isTextarea ? (
-              <Textarea
-                placeholder={placeholder}
-                className={`h-[150px] resize-none text-sm ${isPrimaryForeground ? "bg-pwr-primary-foreground text-pwr-primary" : "border-pwr-primary/30"}`}
-                {...field}
-              />
-            ) : (
+          {isFileInput && (
+            <>
               <Input
                 className={`file:text-pwr-primary rounded-sm text-sm file:border-0 file:bg-transparent file:text-sm file:font-medium ${
                   isPrimaryForeground ? "bg-pwr-primary-foreground text-pwr-primary" : "border-pwr-primary/30"
                 }`}
-                type={type}
-                placeholder={placeholder}
-                onChange={
-                  type === "file" ? (e) => field.onChange(e.target.files?.[0]) : (e) => field.onChange(e.target.value)
-                }
-                accept={type === "file" ? ".pdf,.doc,.docx,.txt,.jpg,.jpeg,.png" : undefined}
+                type="file"
+                ref={fileInputRef}
+                onChange={(e) => field.onChange(e.target.files?.[0])}
+                accept=".pdf,.doc,.docx,.txt,.jpg,.jpeg,.png"
               />
-            )}
-          </FormControl>
-          <FormMessage className="text-red-500" />
+              <FormMessage />
+            </>
+          )}
+          {!isFileInput && (
+            <>
+              <FormControl>
+                {isTextarea ? (
+                  <Textarea
+                    {...field}
+                    placeholder={placeholder}
+                    className={`h-[150px] resize-none text-sm ${isPrimaryForeground ? "bg-pwr-primary-foreground text-pwr-primary" : "border-pwr-primary/30"}`}
+                  />
+                ) : (
+                  <Input
+                    {...field}
+                    className={`rounded-sm text-sm ${
+                      isPrimaryForeground ? "bg-pwr-primary-foreground text-pwr-primary" : "border-pwr-primary/30"
+                    }`}
+                    placeholder={placeholder}
+                  />
+                )}
+              </FormControl>
+              <FormMessage className="text-red-500" />
+            </>
+          )}
         </FormItem>
       )}
     />
@@ -84,7 +101,11 @@ export default function ContactUs({
       attachment: undefined,
       message: "",
     },
+    mode: "onSubmit",
   });
+
+  const fileInputRef = useRef<HTMLInputElement>(null);
+
   async function onSubmit(vals: z.infer<typeof contactUsSchema>) {
     const formData = new FormData();
 
@@ -109,6 +130,16 @@ export default function ContactUs({
     }
   }
 
+  useEffect(() => {
+    if (form.formState.isSubmitSuccessful) {
+      form.reset();
+
+      if (fileInputRef.current) {
+        fileInputRef.current.value = "";
+      }
+    }
+  }, [form.formState.isSubmitSuccessful]);
+
   return (
     <section
       className={`mx-auto max-w-7xl space-y-8 ${isPrimaryForeground ? "text-pwr-primary-foreground" : "text-pwr-primary"}`}>
@@ -119,7 +150,7 @@ export default function ContactUs({
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit)}
-          className={cn("grid gap-4", classNames ? classNames.form : "")}>
+          className={cn("grid gap-4", classNames?.form ? classNames.form : "")}>
           <CustomFormField
             control={form.control}
             name="firstName"
@@ -159,8 +190,9 @@ export default function ContactUs({
             control={form.control}
             name="attachment"
             label="Attachment"
-            type="file"
             placeholder="12345"
+            fileInputRef={fileInputRef}
+            isFileInput
             isPrimaryForeground={isPrimaryForeground}
           />
           <CustomFormField

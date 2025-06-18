@@ -40,9 +40,11 @@ export async function POST(request: Request) {
       }),
       attachments: emailAttachments,
     });
+
     if (error) {
       return Response.json({ error }, { status: 400 });
     }
+
     return Response.json({ data }, { status: 200 });
   } catch (error) {
     return Response.json({ error: "Internal server error" }, { status: 500 });

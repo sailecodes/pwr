@@ -5,7 +5,7 @@ export const contactUsSchema = z.object({
   lastName: z.string().min(1, "Please enter your last name"),
   email: z.string().email("Invalid email address"),
   phoneNumber: z.string().regex(/^\d{3}-\d{3}-\d{4}$/, "Phone number must follow the format: xxx-xxx-xxxx"),
-  zipCode: z.string().min(5, "Please enter your zip code"),
+  zipCode: z.string().min(1, "Please enter your zip code"),
   attachment: z
     .instanceof(File, { message: "Please upload a valid file" })
     .optional()

@@ -32,8 +32,6 @@ export function getUrlString(str: string): string {
   // Special case
   joinedWords = joinedWords.replace("Multi ", "Multi-");
 
-  console.log(joinedWords);
-
   return joinedWords;
 }
 
