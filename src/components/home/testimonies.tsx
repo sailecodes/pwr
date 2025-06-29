@@ -54,14 +54,14 @@ function TestimoniesCard({
   return (
     <div className="space-y-2">
       <header className="flex items-center gap-2">
-        <img
+        {/* <img
           src={href}
           alt={name}
           className="h-[50px] w-[50px] rounded-full object-cover object-center"
-        />
+        /> */}
         <div>
-          <p className="font-bold">{company}</p>
-          <p className="text-sm">{name}</p>
+          <p className="text-sm font-bold">{company}</p>
+          {/* <p className="text-sm">{name}</p> */}
         </div>
       </header>
       <p className="line-clamp-4 text-sm">{review}</p>
