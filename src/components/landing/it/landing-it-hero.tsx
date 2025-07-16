@@ -17,7 +17,7 @@ export default function LandingITHero() {
         <button className="bg-pwr-primary text-bg relative z-2 rounded-lg px-4 py-2 font-bold uppercase">
           Get a quote
         </button>
-        <div className="bg-pwr-primary absolute -right-2 -bottom-5 z-2 mb-0 flex gap-6 rounded-2xl px-6 py-4 shadow-xl">
+        <div className="bg-pwr-primary absolute -right-2 -bottom-5 z-2 mb-0 flex gap-6 rounded-2xl px-6 py-4 shadow-xl/30">
           <div className="flex flex-col items-center">
             <p className="font-medium sm:text-lg">5,000+</p>
             <p className="text-sm">5-Star Reviews</p>
