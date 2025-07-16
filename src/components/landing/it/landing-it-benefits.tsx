@@ -6,6 +6,7 @@ export default function LandingITBenefits() {
       <div className="relative mx-auto max-w-7xl min-w-[325px] space-y-4 p-5 sm:flex sm:flex-row-reverse">
         <img
           src="landing/landing-benefits-cover.jpg"
+          alt="Benefits of Professional IT"
           className="mx-auto rounded-3xl object-cover object-center"
         />
         <div className="flex shrink-0 flex-col space-y-4">
