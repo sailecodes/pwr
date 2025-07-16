@@ -1,5 +1,11 @@
-import Hero from "@/components/landing/it/hero";
+import LandingITBenefits from "@/components/landing/it/landing-it-benefits";
+import LandingITHero from "@/components/landing/it/landing-it-hero";
 
 export default function LandingIT() {
-  return <Hero />;
+  return (
+    <section className="space-y-16">
+      <LandingITHero />
+      <LandingITBenefits />
+    </section>
+  );
 }
