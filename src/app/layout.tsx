@@ -1,9 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { PhoneCall } from "lucide-react";
 import localFont from "next/font/local";
-import Footer from "@/components/app-layout/footer";
-import NavAlt from "@/components/app-layout/nav-alt";
 
 const gotham = localFont({
   src: [
@@ -47,11 +44,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${gotham.className} mx-auto min-h-screen antialiased`}>
-        <NavAlt />
-        {children}
-        <Footer />
-      </body>
+      <body className={`${gotham.className} mx-auto min-h-screen antialiased`}>{children}</body>
     </html>
   );
 }
