@@ -4,12 +4,12 @@ export default function LandingITClients() {
   return (
     <section className="px-4">
       <div className="mx-auto max-w-7xl min-w-[325px]">
-        <header className="text-center text-lg font-bold sm:text-left sm:text-2xl">Most Recent Clients</header>
+        <header className="mb-5 text-center text-lg font-bold sm:text-left sm:text-2xl">Most Recent Clients</header>
         <div className="sm:flex sm:gap-8">
           <div>
             <img
               src={"/landing/landing-clients-1.jpg"}
-              className="h-[300px] min-w-[300px] rounded-3xl object-cover"
+              className="rounded-3xl object-cover"
               alt="Client 1"
             />
             <div>

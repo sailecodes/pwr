@@ -7,7 +7,7 @@ import LandingITWhy from "@/components/landing/it/landing-it-why";
 
 export default function LandingIT() {
   return (
-    <section className="min-h-dvh space-y-16">
+    <section className="mx-auto min-h-dvh max-w-7xl space-y-16">
       <LandingITHero />
       <LandingITWhy />
       <LandingITClients />
