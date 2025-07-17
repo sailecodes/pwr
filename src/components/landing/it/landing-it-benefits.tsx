@@ -1,9 +1,12 @@
 import { CheckCircle2 } from "lucide-react";
 
 const data = [
-  "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam reprehenderit vel aut officia officiis dolores sapiente ad at perspiciatis.",
+  "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam reprehenderit vel aut officia.",
   "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga, accusantium delectus excepturi ut, incidunt ex sunt.",
-  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia rerum necessitatibus impedit maxime distinctio exercitationem consectetur.",
+  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia rerum necessitatibus impedit maxime distinctio.",
+  "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam reprehenderit vel aut officia.",
+  "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga, accusantium delectus excepturi ut, incidunt ex sunt.",
+  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia rerum necessitatibus impedit maxime distinctio.",
 ];
 
 function LandingITBenefitsListItem({ benefit }: { benefit: string }) {
