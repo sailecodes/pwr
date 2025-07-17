@@ -18,7 +18,7 @@ export default function LandingITCta() {
             Get a quote
           </button>
           <button className="border-bg text-bg mt-4 rounded-lg border-[2px] px-4 py-2 font-bold uppercase transition-transform hover:scale-[101%] hover:cursor-pointer">
-            <a href="#">111-111-1111</a>
+            <a href="tel:+19498008953">(949) 800-8953</a>
           </button>
         </div>
       </div>
