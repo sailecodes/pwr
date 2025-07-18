@@ -10,7 +10,7 @@ export default function LandingITCta() {
       }}>
       <div className="relative z-2 mx-auto w-full max-w-3xl space-y-8 sm:flex sm:justify-between">
         <div className="space-y-1">
-          <p className="text-xl font-bold sm:text-3xl">Ready To Level Up?</p>
+          <p className="text-lg font-bold sm:text-3xl">Ready To Level Up?</p>
           <p className="text-sm font-medium">Get Started Today</p>
         </div>
         <div className="space-x-2">
