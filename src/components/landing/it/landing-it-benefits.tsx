@@ -22,7 +22,7 @@ export default function LandingITBenefits() {
   return (
     <section>
       <div className="mx-auto max-w-7xl min-w-[325px] p-5 lg:flex lg:flex-row-reverse lg:justify-end lg:gap-10">
-        <div className="mb-4 sm:mb-7">
+        <div className="mb-4 sm:mb-7 lg:mb-0">
           <img
             src="landing/landing-benefits-cover.jpg"
             alt="Benefits of Professional IT"
@@ -41,7 +41,7 @@ export default function LandingITBenefits() {
               ))}
             </ul>
           </div>
-          <button className="hover:bg-pwr-primary/90 bg-pwr-primary text-bg mx-auto rounded-lg px-4 py-2 font-bold uppercase transition-transform hover:scale-[101%] hover:cursor-pointer">
+          <button className="bg-pwr-primary border-pwr-primary text-bg mx-auto rounded-lg border-[2px] px-4 py-2 font-bold uppercase transition-all duration-200 hover:-translate-y-[1px] hover:cursor-pointer hover:shadow-lg">
             Get a quote
           </button>
         </div>
