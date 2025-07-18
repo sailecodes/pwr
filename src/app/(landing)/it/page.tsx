@@ -1,5 +1,6 @@
 import LandingITBenefits from "@/components/landing/it/landing-it-benefits";
 import LandingITBest from "@/components/landing/it/landing-it-best";
+import LandingITBrands from "@/components/landing/it/landing-it-brands";
 import LandingITClients from "@/components/landing/it/landing-it-clients";
 import LandingITCta from "@/components/landing/it/landing-it-cta";
 import LandingITFaq from "@/components/landing/it/landing-it-faq";
@@ -12,7 +13,7 @@ export default function LandingIT() {
       <LandingITHero />
       <LandingITWhy />
       <LandingITClients />
-      {/* Brands */}
+      <LandingITBrands />
       <LandingITBenefits />
       <LandingITBest />
       <LandingITFaq />
