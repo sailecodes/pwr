@@ -37,10 +37,10 @@ function LandingITFaqItem({ value, trigger, text }: { value: string; trigger: st
 
 export default function LandingITFaq() {
   return (
-    <section>
+    <section className="mb-10">
       <div className="relative mx-auto flex max-w-6xl min-w-[325px] flex-col space-y-7 px-5 sm:flex-row sm:gap-10">
         <div className="mx-auto shrink-0 space-y-7 max-[768px]:w-[335px] min-[1120px]:min-w-[700px] sm:mx-0 md:w-[500px]">
-          <header className="text-pwr-primary text-center text-lg font-bold sm:text-left sm:text-3xl">
+          <header className="text-pwr-primary text-center text-lg/6 font-bold sm:text-left sm:text-3xl/9 lg:text-4xl/10">
             Common IT Concerns
           </header>
           <Accordion

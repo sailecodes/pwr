@@ -80,9 +80,11 @@ function LandingITClientsMainTestimonial({}: {
 
 export default function LandingITClients() {
   return (
-    <section>
-      <div className="text-pwr-primary mx-auto max-w-6xl min-w-[325px] px-5">
-        <header className="mb-5 text-center text-2xl font-bold sm:text-left sm:text-3xl">Most Recent Clients</header>
+    <section className="px-5">
+      <div className="text-pwr-primary mx-auto max-w-6xl min-w-[325px]">
+        <header className="mb-5 text-center text-lg/6 font-bold sm:text-left sm:text-3xl/9 lg:text-4xl/10">
+          Most Recent Clients
+        </header>
         <div className="space-y-10 sm:flex sm:gap-10">
           <LandingITClientsMainTestimonial />
           <div className="flex flex-col gap-5 sm:flex-1/2">

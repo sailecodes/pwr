@@ -1,9 +1,11 @@
 export default function LandingITBest() {
   return (
-    <section className="bg-pwr-primary/30">
+    <section className="bg-pwr-primary/30 mb-10">
       <div className="mx-auto flex max-w-6xl flex-col items-center gap-5 p-5 sm:h-[275px] sm:flex-row sm:justify-between sm:gap-10">
         <div className="text-pwr-primary space-y-2 sm:max-w-[450px] lg:max-w-[550px]">
-          <header className="text-center text-2xl font-bold sm:text-left sm:text-3xl">We Install Only The Best</header>
+          <header className="text-center text-lg/6 font-bold sm:text-left sm:text-3xl/9 lg:text-4xl/10">
+            We Install Only The Best
+          </header>
           <p className="text-sm/6">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel explica, quibusdam magnam eos dolores doloribus
             officia provident voluptatum. Distinctio fuga ducimus perferendis, deserunt dolore mollitia reiciendis ipsa

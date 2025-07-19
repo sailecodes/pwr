@@ -20,8 +20,8 @@ function LandingITBenefitsListItem({ benefit }: { benefit: string }) {
 
 export default function LandingITBenefits() {
   return (
-    <section>
-      <div className="mx-auto max-w-7xl min-w-[325px] p-5 lg:flex lg:flex-row-reverse lg:justify-end lg:gap-10">
+    <section className="mb-10 px-5">
+      <div className="text-pwr-primary mx-auto max-w-6xl min-w-[325px] lg:flex lg:flex-row-reverse lg:justify-end lg:gap-10">
         <div className="mb-4 sm:mb-7 lg:mb-0">
           <img
             src="landing/landing-benefits-cover.jpg"
@@ -29,9 +29,11 @@ export default function LandingITBenefits() {
             className="mx-auto rounded-3xl object-cover object-center"
           />
         </div>
-        <div className="mx-auto flex shrink-0 flex-col gap-4 sm:max-w-[650px] sm:gap-6 lg:mx-0 lg:max-w-[400px]">
+        <div className="mx-auto flex shrink-0 flex-col gap-4 sm:max-w-[650px] sm:gap-6 lg:mx-0 lg:max-w-[480px]">
           <div className="space-y-3 sm:space-y-5">
-            <header className="text-center text-lg font-bold sm:text-3xl">Benefits of Professional IT</header>
+            <header className="text-center text-lg/6 font-bold sm:text-3xl/9 lg:text-4xl/10">
+              Benefits of Professional IT
+            </header>
             <ul className="space-y-2 text-sm sm:space-y-4">
               {data.map((benefit, ind) => (
                 <LandingITBenefitsListItem
