@@ -1,13 +1,6 @@
 import { Star } from "lucide-react";
 
-function LandingITClientsSecondaryTestimonial({}: {
-  // src: string;
-  // alt: string;
-  // testimonial: string;
-  // company: string;
-  // name: string;
-  // rating: number;
-}) {
+function LandingITClientsSecondaryTestimonial() {
   return (
     <div className="flex gap-4">
       <div className="flex-1/3">
@@ -40,14 +33,7 @@ function LandingITClientsSecondaryTestimonial({}: {
   );
 }
 
-function LandingITClientsMainTestimonial({}: {
-  // src: string;
-  // alt: string;
-  // testimonial: string;
-  // company: string;
-  // name: string;
-  // rating: number;
-}) {
+function LandingITClientsMainTestimonial() {
   return (
     <div className="space-y-5 sm:flex-1/2">
       <div className="mx-auto">

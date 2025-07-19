@@ -61,6 +61,7 @@ export default function LandingITFaq() {
           <img
             src="/landing/landing-faq-img.jpg"
             className="hidden rounded-3xl object-cover object-center sm:block"
+            alt="FAQ Image"
           />
           <button className="bg-pwr-primary border-pwr-primary text-bg mx-auto rounded-lg border-[2px] px-4 py-2 font-bold uppercase transition-all duration-200 hover:-translate-y-[1px] hover:cursor-pointer hover:shadow-lg">
             Get a quote
