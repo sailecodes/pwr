@@ -24,7 +24,7 @@ function LandingITFaqItem({ value, trigger, text }: { value: string; trigger: st
         <AccordionTrigger
           withIcon
           iconLeft
-          className="bg-pwr-primary justify-center rounded-3xl px-5 text-base text-white sm:text-lg">
+          className="bg-pwr-primary justify-center rounded-3xl px-5 text-base text-white hover:cursor-pointer hover:no-underline sm:text-lg">
           {trigger}
         </AccordionTrigger>
       </div>
